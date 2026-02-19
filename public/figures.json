@@ -1,13 +1,63 @@
 [
   {
     "id": "1",
-    "nom": "Platja de Tossa de Mar",
-    "nom_fitxer": "tossa_platja.jpg",
-    "autor": "Autor desconegut",
+  "nom": "Platja de Tossa de Mar",
+    "nom_fitxer": "tossa_torre.jpg",
+    "autor": "Família Cuyàs",
     "lat": 41.718831,
     "lon": 2.933144,
     "any_foto": 1932,
-    "descripcio": "Vista aèria de la Platja de Tossa de Mar."
+    "descripcio": "Vista de la Platja de Tossa de Mar."
+  },
+    {
+    "id": "2",
+    "nom": "Llac de Puigcerdà",
+    "nom_fitxer": "puigcerda_llac.jpg",
+    "autor": "Autor desconegut",
+    "lat": 42.436622,
+    "lon": 1.926977,
+    "any_foto": 1932,
+    "descripcio": "Vista del Llac de Puigcerdà."
+  },
+    {
+    "id": "3",
+    "nom": "Parc de Montjuïc: fonts lluminoses",
+    "nom_fitxer": "bcn_montjuic.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.369647,
+    "lon": 2.152732,
+    "any_foto": 1932,
+    "descripcio": "Parc de Montjuïc: fonts lluminoses."
+  },
+    {
+    "id": "4",
+    "nom": "Plaça del Dr. Bartomeu Robert Casa de la Ciutat, façana posterior",
+    "nom_fitxer": "sabadell_robert.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.546502,
+    "lon": 2.108778,
+    "any_foto": 1932,
+    "descripcio": "Plaça del Dr. Bartomeu Robert Casa de la Ciutat, façana posterior."
+  },
+    {
+    "id": "5",
+    "nom": "Església de la Mare de Déu de la Salut, Castelldefels",
+    "nom_fitxer": "castelldefels_esglesia.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.280632,
+    "lon": 1.976965,
+    "any_foto": 1932,
+    "descripcio": "Església de la Mare de Déu de la Salut, Castelldefels."
+  },
+    {
+    "id": "6",
+    "nom": "Casa de les Punxes, obra de Puig i Cadafalch, Barcelona",
+    "nom_fitxer": "bcn_punxes.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.39803,
+    "lon": 2.16407,
+    "any_foto": 1932,
+    "descripcio": "Casa de les Punxes, obra de Puig i Cadafalch, Barcelona."
   }
 ]
 

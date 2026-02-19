@@ -1,72 +1,42 @@
 /* Component-specific style overrides */
 
-/* Leaflet map styling for noir theme */
-.leaflet-container {
-  @apply bg-noir-surface;
-}
-
-.leaflet-control {
-  @apply border-noir-gold/30;
-}
-
-.leaflet-bar a {
-  @apply bg-noir-surface text-noir-text border-noir-gold/30;
-  @apply hover:bg-noir-red hover:text-noir-text;
-}
-
-/* Custom marker styling */
+/* ── Custom map markers ── */
 .custom-marker {
-  @apply bg-noir-red border-2 border-noir-gold rounded-full;
-  box-shadow: 0 0 12px rgba(203, 161, 53, 0.6);
+  background: var(--noir-red);
+  border: 2px solid var(--noir-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(212,168,67,0.5);
 }
 
-/* Timeline slider */
-.timeline-slider {
-  @apply w-full h-2 bg-noir-surface rounded-lg;
-  @apply border border-noir-gold/30;
-}
-
-.timeline-slider::-webkit-slider-thumb {
-  @apply appearance-none w-4 h-4 bg-noir-gold rounded-full cursor-pointer;
-  @apply hover:bg-noir-gold hover:scale-110;
-  box-shadow: 0 0 8px rgba(203, 161, 53, 0.5);
-}
-
-.timeline-slider::-moz-range-thumb {
-  @apply w-4 h-4 bg-noir-gold rounded-full cursor-pointer border-0;
-  @apply hover:bg-noir-gold hover:scale-110;
-  box-shadow: 0 0 8px rgba(203, 161, 53, 0.5);
-}
-
-/* Loading spinner */
+/* ── Loading spinner ── */
 .spinner {
-  @apply inline-block w-8 h-8 border-4 border-noir-gold/30 border-t-noir-gold rounded-full;
-  animation: spin 1s linear infinite;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(212,168,67,0.2);
+  border-top-color: var(--noir-gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
-/* Toast notifications */
+/* ── Toast notifications ── */
 .toast {
-  @apply fixed bottom-4 right-4 z-50;
-  @apply bg-noir-surface border border-noir-gold/30 rounded-lg p-4;
-  @apply shadow-noir-deep;
-  animation: slideUp 300ms ease-out;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  background: var(--noir-surface);
+  border: 1px solid rgba(212,168,67,0.25);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-deep);
+  animation: slideUp 0.3s cubic-bezier(0.25,1,0.5,1) both;
 }
 
-.toast.success {
-  @apply border-green-500/50;
-}
-
-.toast.error {
-  @apply border-noir-red;
-}
-
-.toast.warning {
-  @apply border-yellow-500/50;
-}
-
+.toast.success { border-color: rgba(74,222,128,0.4); }
+.toast.error   { border-color: rgba(107,20,20,0.7);  }
+.toast.warning { border-color: rgba(234,179,8,0.4);  }

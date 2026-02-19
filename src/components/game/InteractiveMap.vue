@@ -1,31 +1,32 @@
 <template>
-  <Card :padding="padding" class="map-container">
+  <div class="map-container">
     <div ref="mapElement" class="map-element"></div>
+    <Transition name="fade">
+      <div v-if="!guessedCoordinates" class="map-hint">
+        Clica per marcar la ubicació
+      </div>
+    </Transition>
+
     <div v-if="showCoordinates && guessedCoordinates" class="coordinates-display">
       {{ guessedCoordinates.lat.toFixed(2) }}°,
       {{ guessedCoordinates.lon.toFixed(2) }}°
     </div>
-  </Card>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useMap } from '@/composables/useMap';
-import Card from '@/components/ui/Card.vue';
 import type { Coordinates } from '@/types/figure';
 
 interface Props {
-  revealLocation?: Coordinates | null;
   disabled?: boolean;
   showCoordinates?: boolean;
-  padding?: 'none' | 'sm' | 'md' | 'lg';
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  revealLocation: null,
   disabled: false,
   showCoordinates: true,
-  padding: 'none',
 });
 
 const emit = defineEmits<{
@@ -34,54 +35,57 @@ const emit = defineEmits<{
 
 const mapElement = ref<HTMLElement | null>(null);
 
-const {
-  guessedCoordinates,
-  showCorrectLocation,
-  clearMap,
-  resetView,
-} = useMap(mapElement);
+const { guessedCoordinates, showCorrectLocation, clearMap, resetView } = useMap(mapElement);
 
-// Watch for guessed coordinates and emit
 watch(guessedCoordinates, (coords) => {
   if (coords && !props.disabled) {
     emit('guess', coords);
   }
 });
 
-// Watch for reveal location
-watch(
-  () => props.revealLocation,
-  (location) => {
-    if (location) {
-      showCorrectLocation(location.lat, location.lon);
-    }
-  },
-);
-
-// Expose methods for parent component
-defineExpose({
-  clearMap,
-  resetView,
-  showCorrectLocation,
-});
+defineExpose({ clearMap, resetView, showCorrectLocation });
 </script>
 
 <style scoped>
 .map-container {
-  @apply relative w-full h-full min-h-[300px] md:min-h-[400px];
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
 }
 
 .map-element {
-  @apply w-full h-full min-h-[300px] md:min-h-[400px] rounded-lg;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
 }
 
 .coordinates-display {
-  @apply absolute bottom-4 left-4 bg-noir-surface/90 text-noir-text px-3 py-1.5 rounded-lg border border-noir-gold/20 text-sm font-mono z-[1000];
+  @apply absolute bottom-3 left-3 bg-noir-surface/90 text-noir-text px-2 py-1 rounded border border-noir-gold/20 text-xs font-mono z-[1000];
 }
 
-/* Custom styles for MapLibre */
+.map-hint {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-family: ui-monospace, monospace;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(14,13,13,0.88);
+  border: 1px solid rgba(203,161,53,0.22);
+  color: rgba(237,224,206,0.55);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* MapLibre overrides */
 :deep(.maplibregl-map) {
-  @apply bg-noir-bg rounded-lg;
+  @apply bg-noir-bg;
+  height: 100% !important;
 }
 
 :deep(.maplibregl-ctrl-group) {
@@ -99,4 +103,3 @@ defineExpose({
   @apply bg-noir-gold/10;
 }
 </style>
-

@@ -18,9 +18,8 @@ export function calculateSpatialScore(
 ): { score: number; distance: number } {
   const distance = haversineDistance(guessedLat, guessedLon, correctLat, correctLon)
 
-  // Linear decay: lose 10 points per 100 km
-  // ~8,000 km off = 0 points
-  const score = Math.max(0, Math.round(800 - distance / 10))
+  // Linear decay: 0 points at 100 km
+  const score = Math.max(0, Math.round(800 - distance * 8))
 
   return { score, distance }
 }

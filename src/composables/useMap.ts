@@ -120,10 +120,10 @@ export function useMap(mapContainer: Ref<HTMLElement | null>, options: UseMapOpt
           type: 'line',
           source: LINE_SOURCE,
           paint: {
-            'line-color': '#CBA135',
-            'line-width': 2,
-            'line-opacity': 0.7,
-            'line-dasharray': [2, 4],
+            'line-color': '#000000',
+            'line-width': 4,
+            'line-opacity': 0.9,
+            'line-dasharray': [4, 4],
           },
         })
       }

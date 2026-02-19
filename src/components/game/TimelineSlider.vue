@@ -1,28 +1,21 @@
 <template>
-  <Card :padding="padding" class="timeline-container">
-    <div class="timeline-header">
-      <div class="flex items-center justify-between mb-2">
-        <label class="text-sm font-medium text-noir-text">Any de la foto</label>
-        <span class="text-xs text-noir-text/50">{{ MIN_YEAR }}–{{ MAX_YEAR }}</span>
-      </div>
-
-      <!-- Direct year input -->
-      <div class="flex items-center gap-2 mb-4">
-        <input
-          v-model.number="directYearInput"
-          type="number"
-          :min="MIN_YEAR"
-          :max="MAX_YEAR"
-          :disabled="disabled"
-          class="year-input"
-          placeholder="Escriu l'any..."
-          @input="handleDirectInput"
-        />
-      </div>
+  <div class="timeline-container">
+    <!-- Big year display / input -->
+    <div class="year-display-wrap">
+      <label class="year-label">Any de la foto</label>
+      <input
+        v-model.number="directYearInput"
+        type="number"
+        :min="MIN_YEAR"
+        :max="MAX_YEAR"
+        :disabled="disabled"
+        class="year-display"
+        @input="handleDirectInput"
+      />
     </div>
 
     <!-- Slider -->
-    <div class="slider-wrapper">
+    <div class="slider-wrap">
       <input
         ref="sliderRef"
         v-model.number="sliderValue"
@@ -34,24 +27,16 @@
         class="timeline-slider"
         @input="handleSliderChange"
       />
-
-      <!-- Slider labels -->
       <div class="slider-labels">
-        <span class="text-xs text-noir-text/60">{{ MIN_YEAR }}</span>
-        <span class="text-xs text-noir-text/60">{{ MAX_YEAR }}</span>
-      </div>
-
-      <!-- Current value display -->
-      <div class="current-value">
-        <span class="text-2xl font-mono text-noir-gold">{{ modelValue }}</span>
+        <span>{{ MIN_YEAR }}</span>
+        <span>{{ MAX_YEAR }}</span>
       </div>
     </div>
-  </Card>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import Card from '@/components/ui/Card.vue'
 
 const MIN_YEAR = 1839
 const MAX_YEAR = new Date().getFullYear()
@@ -60,13 +45,11 @@ interface Props {
   modelValue: number
   disabled?: boolean
   snapIncrement?: number
-  padding?: 'none' | 'sm' | 'md' | 'lg'
 }
 
 const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   snapIncrement: 1,
-  padding: 'sm',
 })
 
 const emit = defineEmits<{
@@ -100,47 +83,96 @@ watch(
 </script>
 
 <style scoped>
+/* ── Container ── */
 .timeline-container {
-  @apply w-full;
+  @apply w-full px-4 py-3 space-y-3;
 }
 
-.year-input {
-  @apply flex-1 px-3 py-2 bg-noir-surface text-noir-text border border-noir-gold/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-noir-gold/30 focus:border-noir-gold/40 transition-all font-mono;
+/* ── Year display ── */
+.year-display-wrap {
+  @apply flex flex-col items-center gap-1;
 }
 
-.year-input:disabled {
-  @apply opacity-50 cursor-not-allowed;
+.year-label {
+  @apply text-xs text-noir-text/40 tracking-widest uppercase;
 }
 
-.slider-wrapper {
-  @apply relative;
+.year-display {
+  @apply w-full text-center font-mono text-noir-gold;
+  font-size: 2.25rem;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(203,161,53,0.25);
+  padding-bottom: 6px;
+  color: #cba135;
+  outline: none;
+  /* remove spin arrows */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.year-display::-webkit-outer-spin-button,
+.year-display::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.year-display:focus {
+  border-bottom-color: rgba(203,161,53,0.6);
+}
+
+.year-display:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Slider ── */
+.slider-wrap {
+  @apply relative w-full;
 }
 
 .timeline-slider {
-  @apply w-full h-2 bg-noir-bg rounded-lg appearance-none cursor-pointer transition-all;
+  @apply w-full cursor-pointer appearance-none;
+  height: 4px;
+  background: rgba(203,161,53,0.18);
+  border-radius: 999px;
+  outline: none;
 }
 
 .timeline-slider::-webkit-slider-thumb {
-  @apply appearance-none w-6 h-6 bg-noir-text rounded-full border-2 border-noir-gold cursor-pointer shadow-lg;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f1e6d6;
+  border: 2px solid #cba135;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(203,161,53,0.35);
+  transition: box-shadow 0.15s ease;
+}
+
+.timeline-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 14px rgba(203,161,53,0.55);
 }
 
 .timeline-slider::-moz-range-thumb {
-  @apply w-6 h-6 bg-noir-text rounded-full border-2 border-noir-gold cursor-pointer shadow-lg;
-}
-
-.timeline-slider::-webkit-slider-runnable-track {
-  @apply bg-gradient-to-r from-noir-gold/40 to-noir-bg;
-}
-
-.slider-labels {
-  @apply flex justify-between mt-1 px-1;
-}
-
-.current-value {
-  @apply flex items-center justify-center mt-4 pt-4 border-t border-noir-gold/10;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f1e6d6;
+  border: 2px solid #cba135;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(203,161,53,0.35);
 }
 
 .timeline-slider:disabled {
-  @apply opacity-50 cursor-not-allowed;
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.slider-labels {
+  @apply flex justify-between mt-1.5 px-0.5;
+  @apply text-xs text-noir-text/35;
 }
 </style>

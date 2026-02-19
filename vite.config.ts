@@ -5,6 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: '/carto-guesser/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

@@ -1,5 +1,5 @@
 <template>
-  <Card :padding="padding" class="figure-carousel">
+  <div class="figure-carousel">
     <div class="image-wrapper">
       <!-- La imatge sempre és al DOM perquè l'event @load pugui disparar-se -->
       <img
@@ -11,34 +11,35 @@
         @error="handleError"
       />
 
-      <!-- Overlay de càrrega (per sobre de la imatge) -->
+      <!-- Vignette cinematogràfic -->
+      <div class="vignette" aria-hidden="true"></div>
+      <!-- Badge -->
+      <div class="photo-badge" aria-hidden="true">📷</div>
+
+      <!-- Overlay de càrrega -->
       <div v-if="loading && !imageError" class="state-overlay">
         <div class="spinner"></div>
-        <p class="text-noir-text/60 mt-4 text-sm">Carregant imatge...</p>
+        <p class="text-noir-text/60 mt-3 text-sm">Carregant imatge...</p>
       </div>
 
       <!-- Error -->
       <div v-if="imageError" class="state-overlay">
         <p class="text-noir-text/60">Imatge no disponible</p>
-        <p class="text-noir-text/40 text-xs mt-1">{{ imageUrl }}</p>
       </div>
     </div>
-  </Card>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
-import Card from '@/components/ui/Card.vue'
 
 interface Props {
   nomFitxer: string
   altText?: string
-  padding?: 'none' | 'sm' | 'md' | 'lg'
 }
 
 const props = withDefaults(defineProps<Props>(), {
   altText: 'Fotografia',
-  padding: 'none',
 })
 
 const loading = ref(true)
@@ -62,11 +63,11 @@ watch(
 
 <style scoped>
 .figure-carousel {
-  @apply relative w-full;
+  @apply relative w-full h-full bg-noir-surface;
 }
 
 .image-wrapper {
-  @apply relative w-full aspect-[3/4] bg-noir-bg rounded-lg overflow-hidden;
+  @apply relative w-full h-full bg-noir-bg overflow-hidden;
 }
 
 .figure-image {
@@ -75,10 +76,31 @@ watch(
 
 .state-overlay {
   @apply absolute inset-0 flex flex-col items-center justify-center bg-noir-bg;
+  z-index: 3;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 28%),
+    linear-gradient(to top,    rgba(0,0,0,0.45) 0%, transparent 38%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.photo-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 15px;
+  opacity: 0.4;
+  z-index: 2;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.9));
 }
 
 .spinner {
-  @apply w-12 h-12 border-4 border-noir-gold/20 border-t-noir-gold rounded-full animate-spin;
+  @apply w-10 h-10 border-4 border-noir-gold/20 border-t-noir-gold rounded-full animate-spin;
 }
 
 @keyframes spin {

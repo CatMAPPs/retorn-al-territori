@@ -1,21 +1,18 @@
 <template>
   <div class="reveal-phase">
-    <!-- Figure information -->
-    <Card class="reveal-card mb-4">
+    <!-- Figure info -->
+    <Card class="reveal-card">
       <div class="reveal-header">
-        <h2 class="text-2xl font-playfair text-noir-gold">{{ figure.nom }}</h2>
-        <div class="figure-years">
-          <span class="text-noir-text/80">{{ figure.any_foto }}</span>
-        </div>
+        <h2 class="figure-nom">{{ figure.nom }}</h2>
+        <span class="figure-year">{{ figure.any_foto }}</span>
       </div>
-
-      <div class="reveal-content">
-        <p class="figure-autor">📷 {{ figure.autor }}</p>
-        <p class="figure-description">{{ figure.descripcio }}</p>
+      <div class="reveal-meta">
+        <span class="figure-autor">📷 {{ figure.autor }}</span>
+        <p v-if="figure.descripcio" class="figure-desc">{{ figure.descripcio }}</p>
       </div>
     </Card>
 
-    <!-- Score breakdown -->
+    <!-- Score -->
     <ScoreBreakdown
       v-if="roundScore"
       :round-score="roundScore"
@@ -24,20 +21,10 @@
 
     <!-- Actions -->
     <div class="reveal-actions">
-      <Button
-        variant="primary"
-        size="lg"
-        full-width
-        @click="handleNext"
-      >
+      <Button variant="primary" size="lg" full-width @click="handleNext">
         {{ isLastRound ? 'Veure Resultats' : 'Pròxima Ronda' }}
       </Button>
-      <Button
-        variant="ghost"
-        size="lg"
-        full-width
-        @click="emit('backToHome')"
-      >
+      <Button variant="ghost" size="lg" full-width @click="emit('backToHome')">
         Tornar a la Home
       </Button>
     </div>
@@ -71,56 +58,51 @@ const emit = defineEmits<{
   backToHome: []
 }>()
 
-const handleNext = () => {
-  emit('next')
-}
+const handleNext = () => emit('next')
 </script>
 
 <style scoped>
 .reveal-phase {
-  @apply w-full;
+  @apply w-full space-y-3 p-4;
 }
 
+/* ── Figure card ── */
 .reveal-card {
-  @apply animate-fade-in;
+  animation: fadeSlideUp 0.35s ease-out both;
 }
 
 .reveal-header {
-  @apply mb-3 pb-3 border-b border-noir-gold/20;
+  @apply flex items-start justify-between gap-3 mb-3 pb-3;
+  border-bottom: 1px solid rgba(203,161,53,0.15);
 }
 
-.figure-years {
-  @apply text-base font-mono mt-1;
+.figure-nom {
+  @apply text-lg font-playfair text-noir-gold leading-snug;
 }
 
-.reveal-content {
+.figure-year {
+  @apply text-sm font-mono text-noir-text/50 flex-shrink-0 mt-0.5;
+}
+
+.reveal-meta {
   @apply space-y-2;
 }
 
 .figure-autor {
-  @apply text-noir-text/80;
+  @apply text-xs text-noir-text/50 block;
 }
 
-.figure-description {
-  @apply text-noir-text leading-relaxed text-sm;
+.figure-desc {
+  @apply text-sm text-noir-text/75 leading-relaxed;
 }
 
+/* ── Actions ── */
 .reveal-actions {
-  @apply mt-4 space-y-2;
+  @apply space-y-2;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.4s ease-out;
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 </style>

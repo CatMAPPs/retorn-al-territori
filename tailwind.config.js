@@ -5,40 +5,38 @@ export default {
     extend: {
       colors: {
         noir: {
-          bg: '#3B3A3A',
-          surface: '#000000',
-          text: '#F1E6D6',
-          red: '#550000',
-          gold: '#CBA135',
+          bg:      '#0e0d0d',   // near-black, slightly warm
+          surface: '#1b1918',   // dark warm surface (not pure black)
+          text:    '#EDE0CE',   // warm cream
+          red:     '#6b1414',   // deeper red, visible on dark bg
+          gold:    '#D4A843',   // slightly brighter gold
+          muted:   '#2a2826',   // mid-surface for subtle borders/dividers
         },
       },
       fontFamily: {
-        title: ['Bebas Neue', 'sans-serif'],
-        bebas: ['Bebas Neue', 'sans-serif'],
-        heading: ['Playfair Display', 'serif'],
+        title:    ['Bebas Neue', 'sans-serif'],
+        bebas:    ['Bebas Neue', 'sans-serif'],
+        heading:  ['Playfair Display', 'serif'],
         playfair: ['Playfair Display', 'serif'],
-        body: ['Inter', 'Noto Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        body:     ['Inter', 'Noto Sans', 'sans-serif'],
+        mono:     ['JetBrains Mono', 'monospace'],
       },
       letterSpacing: {
         title: '0.06em',
-      },
-      lineHeight: {
-        relaxed: '1.35',
       },
       borderRadius: {
         noir: '12px',
       },
       boxShadow: {
-        noir: '0 6px 16px rgba(0, 0, 0, 0.6)',
-        'noir-deep': '0 6px 18px rgba(0, 0, 0, 0.64), inset 0 1px 0 rgba(255, 255, 255, 0.02)',
-        'noir-glow': '0 0 8px rgba(203, 161, 53, 0.3)',
+        noir:       '0 4px 24px rgba(0,0,0,0.7)',
+        'noir-deep':'0 8px 32px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.03)',
+        'noir-glow':'0 0 16px rgba(212,168,67,0.25)',
+        'gold-soft':'0 0 32px rgba(212,168,67,0.12)',
       },
       transitionDuration: {
-        noir: '300ms',
+        noir: '280ms',
       },
     },
   },
   plugins: [],
 }
-

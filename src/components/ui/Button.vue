@@ -34,75 +34,66 @@ const emit = defineEmits<{
 
 const buttonClasses = computed(() => {
   const base = [
-    'rounded-lg',
+    'rounded-xl',
     'font-medium',
+    'tracking-wide',
     'transition-all',
     'duration-200',
-    'transform',
     'focus:outline-none',
     'focus:ring-2',
     'focus:ring-noir-gold/30',
-    'disabled:opacity-40',
+    'focus:ring-offset-1',
+    'focus:ring-offset-noir-bg',
+    'disabled:opacity-35',
     'disabled:cursor-not-allowed',
-    'disabled:transform-none',
+    'disabled:pointer-events-none',
   ];
 
-  // Variant styles
   const variants = {
     primary: [
       'bg-noir-red',
       'text-noir-text',
       'border',
-      'border-noir-gold/20',
-      'shadow-md',
-      'hover:shadow-[0_0_12px_rgba(203,161,53,0.3)]',
-      'hover:-translate-y-0.5',
+      'border-noir-gold/25',
+      'shadow-[0_2px_12px_rgba(0,0,0,0.4)]',
+      'hover:brightness-110',
+      'hover:-translate-y-px',
+      'hover:shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_12px_rgba(203,161,53,0.15)]',
       'active:translate-y-0',
-      'active:bg-[#3a0000]',
+      'active:brightness-95',
     ],
     secondary: [
       'bg-noir-surface',
       'text-noir-text',
       'border',
       'border-noir-gold/20',
-      'shadow-md',
       'hover:border-noir-gold/40',
-      'hover:-translate-y-0.5',
+      'hover:-translate-y-px',
       'active:translate-y-0',
     ],
     ghost: [
       'bg-transparent',
-      'text-noir-text',
+      'text-noir-text/60',
       'border',
       'border-transparent',
-      'hover:border-noir-gold/20',
+      'hover:text-noir-text/90',
+      'hover:border-noir-gold/15',
       'hover:bg-noir-gold/5',
     ],
   };
 
-  // Size styles
   const sizes = {
-    sm: ['px-3', 'py-1.5', 'text-sm'],
-    md: ['px-4', 'py-2', 'text-base'],
-    lg: ['px-6', 'py-3', 'text-lg'],
+    sm:  ['px-3',   'py-1.5', 'text-sm'],
+    md:  ['px-4',   'py-2',   'text-sm'],
+    lg:  ['px-5',   'py-3',   'text-base'],
   };
 
-  // Width
   const width = props.fullWidth ? ['w-full'] : [];
 
   return [...base, ...variants[props.variant], ...sizes[props.size], ...width];
 });
 
 const handleClick = (event: MouseEvent) => {
-  if (!props.disabled) {
-    emit('click', event);
-  }
+  if (!props.disabled) emit('click', event);
 };
 </script>
-
-<style scoped>
-button {
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.06);
-}
-</style>
-
