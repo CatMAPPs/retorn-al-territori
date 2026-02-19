@@ -4,7 +4,7 @@ let cachedFigures: Figure[] | null = null
 
 async function loadFigures(): Promise<Figure[]> {
   if (cachedFigures) return cachedFigures
-  const response = await fetch('/figures.json')
+  const response = await fetch(`${import.meta.env.BASE_URL}figures.json`)
   if (!response.ok) throw new Error('Failed to load figures.json')
   cachedFigures = await response.json()
   return cachedFigures!

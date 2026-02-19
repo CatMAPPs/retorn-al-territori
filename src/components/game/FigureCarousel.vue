@@ -45,7 +45,7 @@ const props = withDefaults(defineProps<Props>(), {
 const loading = ref(true)
 const imageError = ref(false)
 
-const imageUrl = computed(() => `/images/${props.nomFitxer}`)
+const imageUrl = computed(() => `${import.meta.env.BASE_URL}images/${props.nomFitxer}`)
 
 const handleError = () => {
   loading.value = false
