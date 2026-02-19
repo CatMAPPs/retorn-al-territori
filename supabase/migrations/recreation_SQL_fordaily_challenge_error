@@ -1,0 +1,36 @@
+-- Recreate get_daily_challenge_status with proper table alias to fix 'score' ambiguity
+CREATE OR REPLACE FUNCTION get_daily_challenge_status(user_uuid UUID, target_date DATE DEFAULT CURRENT_DATE)
+RETURNS TABLE (
+  has_completed BOOLEAN,
+  score INTEGER,
+  completed_at TIMESTAMPTZ,
+  current_streak INTEGER,
+  best_score INTEGER
+) AS $$
+DECLARE
+  completion_record RECORD;
+  streak_count INTEGER;
+  best_score_val INTEGER;
+BEGIN
+  -- Check if user completed today's challenge
+  SELECT ds.score, ds.completed_at INTO completion_record
+  FROM daily_scores ds
+  WHERE ds.user_id = user_uuid AND ds.challenge_date = target_date;
+
+  -- Calculate current streak
+  SELECT calculate_streak(user_uuid, target_date) INTO streak_count;
+
+  -- Get best daily score (FIXED: added table alias ds2 to avoid ambiguity with score variable)
+  SELECT COALESCE(MAX(ds2.score), 0) INTO best_score_val
+  FROM daily_scores ds2
+  WHERE ds2.user_id = user_uuid;
+
+  -- Return results
+  RETURN QUERY SELECT
+    (completion_record.score IS NOT NULL) as has_completed,
+    COALESCE(completion_record.score, 0) as score,
+    completion_record.completed_at,
+    COALESCE(streak_count, 0) as current_streak,
+    best_score_val as best_score;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;

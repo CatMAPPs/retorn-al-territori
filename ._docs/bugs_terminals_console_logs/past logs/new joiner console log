@@ -1,0 +1,56 @@
+
+﻿
+@supabase_supabase-js.js?v=06551993:8302 Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+useLobby.ts:308 📤 useLobby returning with reactive state: 
+Object
+MultiplayerView.vue:14 🔍 lobbyComposable: 
+Object
+MultiplayerView.vue:15 🔍 lobbyComposable.error: 
+RefImpl
+MultiplayerView.vue:18 🎯 MultiplayerView mounted, initial state: 
+Object
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+useLobby.ts:308 📤 useLobby returning with reactive state: 
+Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+MultiplayerView.vue:34 ⏳ LOADING CHANGED: 
+Object
+useLobby.ts:65 🧹 Unsubscribing from lobbyStore
+lobbyStore.ts:55 🏪 STORE: setLobby called with: 
+Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+lobbyStore.ts:62 🏪 STORE: setLobby completed, new state: 
+Object
+lobbyStore.ts:66 🏪 STORE: updatePlayers called with 2 players
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+lobbyStore.ts:68 🏪 STORE: updatePlayers completed
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+MultiplayerView.vue:26 🎯 LOBBY CHANGED: 
+Object
+MultiplayerView.vue:30 👤 PLAYER CHANGED: 
+Object
+MultiplayerView.vue:34 ⏳ LOADING CHANGED: 
+Object
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+Object
+useLobby.ts:308 📤 useLobby returning with reactive state: 
+Object

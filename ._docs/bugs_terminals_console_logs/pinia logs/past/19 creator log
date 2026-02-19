@@ -1,0 +1,43 @@
+MultiplayerView.vue:58 🎮 MultiplayerView: Lobby status is now in_progress - should show game screen
+useLobby.ts:235 ✅ Fallback game start completed
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: {isLoading: false, currentLobby: Proxy(Object), hasSetLoading: true}
+useLobby.ts:524 📤 useLobby returning actions only - state accessed via store directly
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:181 🗺️ Map clicked: Proxy(Object) {lat: 18.338883702580357, lon: -98.08593750000001} hasSubmitted: false
+LobbyGameplay.vue:185 📍 Set guessedLat: 18.338883702580357 guessedLon: -98.08593750000001
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 0, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}
+LobbyGameplay.vue:99 🎯 handleSubmitGuess called
+LobbyGameplay.vue:100 canSubmit: true currentFigure: true
+LobbyGameplay.vue:127 ✅ Client-side validation passed: {lat: 18.338883702580357, lon: -98.08593750000001, year: 1621}
+LobbyGameplay.vue:130 ✅ Validation passed - proceeding with submission
+LobbyGameplay.vue:156 📊 Calculated scores: {spatial: 784, temporal: 657, name: 0, speed: 0, total: 1441}
+LobbyGameplay.vue:59 🔘 canSubmit check: {result: false, hasSubmitted: true, guessedLat: 18.338883702580357, guessedLon: -98.08593750000001, guessedYear: 1621, …}

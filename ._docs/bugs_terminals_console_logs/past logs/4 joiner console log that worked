@@ -1,0 +1,47 @@
+@supabase_supabase-js.js?v=06551993:8302 Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+_GoTrueClient @ @supabase_supabase-js.js?v=06551993:8302Understand this warning
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+useLobby.ts:328 📤 useLobby returning with reactive state: Object
+MultiplayerView.vue:14 🔍 lobbyComposable: Object
+MultiplayerView.vue:15 🔍 lobbyComposable.error: RefImpl
+MultiplayerView.vue:18 🎯 MultiplayerView mounted, initial state: Object
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+useLobby.ts:328 📤 useLobby returning with reactive state: Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+MultiplayerView.vue:34 ⏳ LOADING CHANGED: Object
+useLobby.ts:65 🧹 Unsubscribing from lobbyStore
+@supabase_supabase-js.js?v=06551993:2805 Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.
+send @ @supabase_supabase-js.js?v=06551993:2805Understand this warning
+queries.ts:480 📢 Broadcasted player joined event for Anonymous
+lobbyStore.ts:55 🏪 STORE: setLobby called with: Object
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+lobbyStore.ts:62 🏪 STORE: setLobby completed, new state: Object
+lobbyStore.ts:66 🏪 STORE: updatePlayers called with 2 players
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+lobbyStore.ts:68 🏪 STORE: updatePlayers completed
+useLobby.ts:132 🎯 About to setup realtime subscription for join...
+useLobby.ts:227 🔌 Setting up realtime subscription for lobby: 8006e687-4d8b-4546-92c5-41a19b2b8ba0
+realtime.ts:21 📡 Subscribing to channel: lobby:8006e687-4d8b-4546-92c5-41a19b2b8ba0
+useLobby.ts:135 ✅ Realtime subscription setup completed for join
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+MultiplayerView.vue:26 🎯 LOBBY CHANGED: Object
+MultiplayerView.vue:30 👤 PLAYER CHANGED: Object
+MultiplayerView.vue:34 ⏳ LOADING CHANGED: Object
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: Object
+useLobby.ts:328 📤 useLobby returning with reactive state: Object
+realtime.ts:132 📡 Channel subscription status for lobby:8006e687-4d8b-4546-92c5-41a19b2b8ba0: SUBSCRIBED
+realtime.ts:134 ✅ Successfully subscribed to lobby:8006e687-4d8b-4546-92c5-41a19b2b8ba0
+queries.ts:628 📢 Broadcasted player ready event for 31dbf045-9876-4678-a690-34bebffddbd2 ready: true
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: {hasLobby: true, hasPlayer: true, isLoading: false}
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: {hasLobby: true, hasPlayer: true, isLoading: false}
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...

@@ -1,0 +1,75 @@
+Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+_GoTrueClient @ @supabase_supabase-js.js?v=a926d579:8302
+SupabaseAuthClient @ @supabase_supabase-js.js?v=a926d579:10622
+_initSupabaseAuthClient @ @supabase_supabase-js.js?v=a926d579:10788
+SupabaseClient @ @supabase_supabase-js.js?v=a926d579:10664
+createClient @ @supabase_supabase-js.js?v=a926d579:10830
+(anonymous) @ client.ts:23Understand this warning
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+authStore.ts:83 🔑 Attempting sign in for: test9@yahoo.com
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+authStore.ts:55 ✅ Sign in consistency ensured: test9
+authStore.ts:86 📋 Sign in result - session: Exists
+authStore.ts:89 👤 Ensuring user consistency after sign in...
+authStore.ts:91 ✅ Sign in user consistency ensured: test9
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:22 🏪 Initializing lobbyStore...
+useLobby.ts:24 🏪 lobbyStore initialized: {isLoading: false, currentLobby: null, hasSetLoading: true}
+useLobby.ts:332 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+useLobby.ts:362 📤 Return object created: {hasIsLoading: true, isLoadingValue: false, hasCreateNewLobby: true}
+MultiplayerView.vue:29 🔍 lobbyStore reactive refs: {lobby: ObjectRefImpl, player: ObjectRefImpl, isLoading: ObjectRefImpl}
+MultiplayerView.vue:30 🎯 MultiplayerView mounted, initial state: {lobby: null, player: null, isLoading: false}
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:22 🏪 Initializing lobbyStore...
+useLobby.ts:24 🏪 lobbyStore initialized: {isLoading: false, currentLobby: null, hasSetLoading: true}
+useLobby.ts:332 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+useLobby.ts:362 📤 Return object created: {hasIsLoading: true, isLoadingValue: false, hasCreateNewLobby: true}
+LobbyCreateJoin.vue:20 🎨 LobbyCreateJoin component mounted!
+LobbyCreateJoin.vue:21 🔍 LobbyCreateJoin reactive values: {isLoading: false, hasCreateNewLobby: true, hasJoinExistingLobby: true}
+LobbyCreateJoin.vue:32 🏗️ LobbyCreateJoin.handleCreateLobby called!
+LobbyCreateJoin.vue:33 🔍 Component state: {isLoading: false}
+LobbyCreateJoin.vue:35 🚀 Calling createNewLobby...
+useLobby.ts:42 🎯 createNewLobby called - checking auth...
+useLobby.ts:44 👤 Auth user: {id: 'dfd918b7-4024-4dbc-a792-48dd2703bfae', email: 'test9@yahoo.com', username: 'test9', avatar_url: null, created_at: '2025-11-06T08:12:48.674547+00:00', …}
+useLobby.ts:52 ⏳ Setting loading state...
+useLobby.ts:56 🏗️ Creating lobby for user: dfd918b7-4024-4dbc-a792-48dd2703bfae test9
+useLobby.ts:57 🔄 About to call createLobby...
+useLobby.ts:34 🧹 Cleaning up realtime subscription
+useLobby.ts:59 ✅ createLobby returned: {id: 'b2eed1aa-c07a-41d9-9d9d-f4639b471ee5', room_code: 'BX34S4', host_id: 'dfd918b7-4024-4dbc-a792-48dd2703bfae', status: 'waiting', current_round: 0, …}
+useLobby.ts:67 💾 About to call setLobby...
+lobbyStore.ts:26 🏪 STORE: setLobby called with: {lobby: {…}, player: {…}}
+lobbyStore.ts:31 🏪 STORE: setLobby completed, currentLobby: Proxy(Object) {id: 'b2eed1aa-c07a-41d9-9d9d-f4639b471ee5', room_code: 'BX34S4', host_id: 'dfd918b7-4024-4dbc-a792-48dd2703bfae', status: 'waiting', current_round: 0, …}
+useLobby.ts:69 👥 About to call updatePlayers...
+lobbyStore.ts:35 🏪 STORE: updatePlayers called with 1 players
+lobbyStore.ts:37 🏪 STORE: updatePlayers completed
+useLobby.ts:71 ✅ Store operations completed - reactivity is automatic!
+useLobby.ts:74 🎯 About to setup realtime subscription...
+useLobby.ts:217 🔌 Setting up realtime subscription for lobby: b2eed1aa-c07a-41d9-9d9d-f4639b471ee5
+realtime.ts:21 📡 Subscribing to channel: lobby:b2eed1aa-c07a-41d9-9d9d-f4639b471ee5
+useLobby.ts:77 ✅ Realtime subscription setup completed
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:22 🏪 Initializing lobbyStore...
+useLobby.ts:24 🏪 lobbyStore initialized: {isLoading: false, currentLobby: Proxy(Object), hasSetLoading: true}
+useLobby.ts:332 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+useLobby.ts:362 📤 Return object created: {hasIsLoading: true, isLoadingValue: false, hasCreateNewLobby: true}
+LobbyCreateJoin.vue:37 ✅ createNewLobby completed successfully
+realtime.ts:132 📡 Channel subscription status for lobby:b2eed1aa-c07a-41d9-9d9d-f4639b471ee5: SUBSCRIBED
+realtime.ts:134 ✅ Successfully subscribed to lobby:b2eed1aa-c07a-41d9-9d9d-f4639b471ee5
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+2authStore.ts:55 ✅ Sign in consistency ensured: test9
+realtime.ts:55 📢 REALTIME: Player joined lobby via broadcast {connected: true, id: 'c50c9f75-0e7c-43b3-ac00-70bef74c46ba', joined_at: '2025-11-08T04:44:07.814773+00:00', lobby_id: 'b2eed1aa-c07a-41d9-9d9d-f4639b471ee5', ready: false, …}
+useLobby.ts:221 👥 REALTIME CALLBACK: Player joined, refreshing players list
+useLobby.ts:225 👥 REALTIME CALLBACK: Got players from DB: 2
+lobbyStore.ts:35 🏪 STORE: updatePlayers called with 2 players
+lobbyStore.ts:37 🏪 STORE: updatePlayers completed
+useLobby.ts:227 👥 REALTIME CALLBACK: Updated store with players
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+realtime.ts:61 📢 REALTIME: Player ready status updated via broadcast {ready: true, userId: 'a51c9365-8ece-4a8d-a052-2e41a2fef6b3'}
+useLobby.ts:244 👥 REALTIME CALLBACK: Player ready status changed

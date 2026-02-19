@@ -1,0 +1,103 @@
+{irrelevant console logs removed prior to this for brevity}
+LobbyWaitingRoom.vue:74 🎮 LobbyWaitingRoom: Start Game button clicked
+LobbyWaitingRoom.vue:75 🎮 LobbyWaitingRoom: Current state: {isHost: true, allPlayersReady: true, canStartGame: true, players: Proxy(Array)}
+useLobby.ts:203 🎮 startMultiplayerGame called for lobby: 98437024-1584-4047-8330-5455ea30a421
+useLobby.ts:206 ⏳ Setting loading state for game start
+useLobby.ts:210 🚀 Calling startGame API...
+useLobby.ts:35 🧹 Cleaning up realtime subscription
+queries.ts:617 🎮 Updating lobby status to in_progress...
+queries.ts:633 ✅ Lobby status updated successfully
+queries.ts:644 📢 Broadcasted game started event for lobby: 98437024-1584-4047-8330-5455ea30a421
+useLobby.ts:212 ✅ startGame API completed - game started successfully!
+useLobby.ts:213 ⏳ Waiting for realtime status update to transition UI...
+useLobby.ts:218 ⏰ Realtime transition timeout - forcing game start manually
+(anonymous) @ useLobby.ts:218
+setTimeout
+startMultiplayerGame @ useLobby.ts:216
+await in startMultiplayerGame
+handleStartGame @ LobbyWaitingRoom.vue:81
+callWithErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2296
+callWithAsyncErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2303
+emit @ chunk-LG6AQRJS.js?v=a926d579:8589
+(anonymous) @ chunk-LG6AQRJS.js?v=a926d579:10300
+handleClick @ Button.vue:98
+callWithErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2296
+callWithAsyncErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2303
+invoker @ chunk-LG6AQRJS.js?v=a926d579:11335Understand this warning
+useLobby.ts:225 🔄 Fallback: Manually updating lobby status to in_progress
+MultiplayerView.vue:46 🎯 MultiplayerView store changed: {lobby: {…}, player: {…}, playersCount: 2, players: Array(2)}
+MultiplayerView.vue:56 🎯 MultiplayerView: Lobby status changed: waiting → in_progress
+MultiplayerView.vue:58 🎮 MultiplayerView: Lobby status is now in_progress - should show game screen
+useLobby.ts:235 ✅ Fallback game start completed
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: {isLoading: false, currentLobby: Proxy(Object), hasSetLoading: true}
+useLobby.ts:543 📤 useLobby returning actions only - state accessed via store directly
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:191 🗺️ Map clicked: Proxy(Object) {lat: 15.310677799416561, lon: -2.4609375000000004} hasSubmitted: false
+LobbyGameplay.vue:195 📍 Set guessedLat: 15.310677799416561 guessedLon: -2.4609375000000004
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 1866, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 1866, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 1866, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 1866, …}
+realtime.ts:162 📢 REALTIME: Submission received via broadcast: {figure_id: '572fb89d-07be-4b9b-8b5c-33f3c9de79c0', guessed_lat: 25.0669411372633, guessed_lon: 8.72401549386699, guessed_name: 'sheuina', guessed_year: 1806, …}
+realtime.ts:163 📨 REALTIME: About to call onSubmissionReceived callback via broadcast
+useLobby.ts:478 📨 Submission received: {figure_id: '572fb89d-07be-4b9b-8b5c-33f3c9de79c0', guessed_lat: 25.0669411372633, guessed_lon: 8.72401549386699, guessed_name: 'sheuina', guessed_year: 1806, …}
+useLobby.ts:491 📊 Added new submission from user, total now: 1 players: 2
+realtime.ts:166 📨 REALTIME: onSubmissionReceived callback completed successfully via broadcast
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 15.310677799416561, guessedLon: -2.4609375000000004, guessedYear: 1866, …}
+LobbyGameplay.vue:104 🎯 handleSubmitGuess called
+LobbyGameplay.vue:105 canSubmit: true currentFigure: true
+LobbyGameplay.vue:132 ✅ Client-side validation passed: {lat: 15.310677799416561, lon: -2.4609375000000004, year: 1866}
+LobbyGameplay.vue:135 ✅ Validation passed - proceeding with submission
+LobbyGameplay.vue:161 📊 Calculated scores: {spatial: 0, temporal: 777, name: 800, speed: 0, total: 1577}
+queries.ts:688 📢 Broadcast sent for submission: b2408599-e0b0-4472-a1ef-fc4daaf4cc2d
+useLobby.ts:292 🎯 Adding own submission to local roundSubmissions: b2408599-e0b0-4472-a1ef-fc4daaf4cc2d
+useLobby.ts:298 🎯 All players submitted (including self) - reveal phase should start in UI
+LobbyGameplay.vue:202 🎯 All players submitted - showing reveal phase
+LobbyGameplay.vue:203 🎯 Current figure for reveal: Rosa Parks
+RevealPhase.vue:123 RevealPhase figure data: {name: 'Rosa Parks', hometown: 'Tuskegee, Alabama', hasHometown: true, hometownLength: 17}
+LobbyGameplay.vue:182 🎯 Adding own submission to local state: {id: 'b2408599-e0b0-4472-a1ef-fc4daaf4cc2d', lobby_id: '98437024-1584-4047-8330-5455ea30a421', user_id: '4cea1883-91bc-431f-ba4f-eddc93a8b4c6', round_number: 1, figure_id: '572fb89d-07be-4b9b-8b5c-33f3c9de79c0', …}
+LobbyGameplay.vue:211 🎯 advanceRound called - emitting to parent for round progression
+MultiplayerView.vue:74 🎯 handleAdvanceRound called in MultiplayerView
+MultiplayerView.vue:83 🏁 Ending current round and updating scores
+MultiplayerView.vue:98 🎲 Current round: 1 Next round would be: 2
+MultiplayerView.vue:106 🎯 Starting next round: 2
+MultiplayerView.vue:110 🎯 Starting round with figure: Galileo Galilei
+MultiplayerView.vue:119 ✅ Round advancement completed
+LobbyGameplay.vue:215 🔄 Resetting UI state for next round
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: false, guessedLat: null, guessedLon: null, guessedYear: 0, …}
+LobbyGameplay.vue:191 🗺️ Map clicked: Proxy(Object) {lat: 39.30295589389767, lon: -5.361328125} hasSubmitted: false
+LobbyGameplay.vue:195 📍 Set guessedLat: 39.30295589389767 guessedLon: -5.361328125
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 39.30295589389767, guessedLon: -5.361328125, guessedYear: 0, …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: true, hasSubmitted: false, guessedLat: 39.30295589389767, guessedLon: -5.361328125, guessedYear: 1961, …}
+LobbyGameplay.vue:104 🎯 handleSubmitGuess called
+LobbyGameplay.vue:105 canSubmit: true currentFigure: true
+LobbyGameplay.vue:132 ✅ Client-side validation passed: {lat: 39.30295589389767, lon: -5.361328125, year: 1961}
+LobbyGameplay.vue:135 ✅ Validation passed - proceeding with submission
+LobbyGameplay.vue:161 📊 Calculated scores: {spatial: 660, temporal: 602, name: 0, speed: 0, total: 1262}
+queries.ts:688 📢 Broadcast sent for submission: 4a264525-ab45-46cf-8017-c717ce2fdf21
+useLobby.ts:292 🎯 Adding own submission to local roundSubmissions: 4a264525-ab45-46cf-8017-c717ce2fdf21
+LobbyGameplay.vue:182 🎯 Adding own submission to local state: {id: '4a264525-ab45-46cf-8017-c717ce2fdf21', lobby_id: '98437024-1584-4047-8330-5455ea30a421', user_id: '4cea1883-91bc-431f-ba4f-eddc93a8b4c6', round_number: 2, figure_id: 'ceb08a13-e742-4e2c-af09-ec6fe0f71d40', …}
+LobbyGameplay.vue:64 🔘 canSubmit check: {result: false, hasSubmitted: true, guessedLat: 39.30295589389767, guessedLon: -5.361328125, guessedYear: 1961, …}

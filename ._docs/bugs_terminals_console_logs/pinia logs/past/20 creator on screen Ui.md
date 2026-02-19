@@ -1,0 +1,5 @@
+ RENDERING: Fallback (unexpected state)
+
+Lobby: { "id": "7740ffab-ba33-48ca-8157-a37b7bc4b204", "room_code": "UXFMDH", "host_id": "4cea1883-91bc-431f-ba4f-eddc93a8b4c6", "status": "in_progress", "current_round": 1, "figure_ids": [ "6774e5e2-7830-4a3d-960b-ea4103bb0a23", "2bdee868-9128-4389-8cd4-ff272d0f3038", "d3556929-f466-468f-808f-de23560f0e21", "71855ba9-176a-4d37-8e66-ad7d76a030bc", "f42b31f2-0c7b-4ea7-88d0-0896679aa765", "8060d265-cd30-46a3-af00-aebe877c5f8c", "571821e2-712f-4253-b9e2-acd347bb8910", "53190f65-066e-4ea7-911b-7cc31946dd66", "6c221933-363d-45c0-bde9-97ae38323368", "0b2c1e3e-d069-406b-9986-f18aaac83c5b" ], "created_at": "2025-11-09T08:57:16.061396+00:00", "expires_at": "2025-11-10T08:58:44.51+00:00" }
+
+Player: { "id": "c74610d4-462f-479d-b46a-39b7eb1efd64", "lobby_id": "7740ffab-ba33-48ca-8157-a37b7bc4b204", "user_id": "4cea1883-91bc-431f-ba4f-eddc93a8b4c6", "username": "test11", "score": 0, "ready": false, "connected": true, "joined_at": "2025-11-09T08:57:16.208864+00:00" }

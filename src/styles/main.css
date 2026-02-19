@@ -1,0 +1,194 @@
+/* Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for Film Noir theme */
+:root {
+  --noir-bg: #3b3a3a;
+  --noir-surface: #000000;
+  --noir-text: #f1e6d6;
+  --noir-red: #550000;
+  --noir-gold: #cba135;
+  
+  /* Shadows and effects */
+  --noir-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  --noir-shadow-deep: 0 6px 18px rgba(0, 0, 0, 0.64), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  --noir-glow: 0 0 8px rgba(203, 161, 53, 0.3);
+  
+  /* Typography */
+  --text-shadow-subtle: 0 0 6px rgba(255, 255, 255, 0.06);
+}
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-noir-gold/15;
+  }
+
+  body {
+    @apply bg-noir-bg text-noir-text font-body;
+    line-height: 1.35;
+    text-shadow: var(--text-shadow-subtle);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-noir-text;
+  }
+
+  /* Scrollbar styling for noir theme */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-noir-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-noir-gold/30 rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-noir-gold/50;
+  }
+}
+
+/* Component utilities */
+@layer components {
+  /* Button variants */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-body transition-all duration-noir;
+    @apply shadow-md active:shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-noir-red text-noir-text border border-noir-gold;
+    @apply hover:shadow-noir-glow hover:-translate-y-0.5;
+    @apply active:bg-noir-red/80 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-noir-surface text-noir-text border border-noir-gold/50;
+    @apply hover:border-noir-gold hover:shadow-noir-glow;
+  }
+
+  .btn-disabled {
+    @apply opacity-40 cursor-not-allowed;
+    @apply hover:shadow-none hover:translate-y-0;
+  }
+
+  /* Card component */
+  .card {
+    @apply bg-noir-surface text-noir-text;
+    @apply border border-noir-gold/15 rounded-xl p-6;
+    @apply shadow-noir;
+  }
+
+  /* Input fields */
+  .input {
+    @apply bg-noir-surface text-noir-text;
+    @apply border border-noir-gold/30 rounded-lg px-3 py-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-noir-gold focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+
+  /* Modal backdrop */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black/80 backdrop-blur-sm;
+    @apply flex items-center justify-center z-50;
+  }
+
+  /* Modal panel */
+  .modal-panel {
+    @apply bg-noir-surface border border-noir-gold/30 rounded-xl;
+    @apply shadow-noir-deep p-6 max-w-lg w-full mx-4;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px currentColor;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 12px rgba(203, 161, 53, 0.4), inset 0 1px 0 rgba(203, 161, 53, 0.1);
+  }
+
+  .noir-texture {
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.06"/%3E%3C/svg%3E');
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 300ms ease-out;
+}
+
+/* Vue Transition components */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slideUp 400ms ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 300ms ease-out;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-noir-gold ring-offset-2 ring-offset-noir-bg;
+}
+

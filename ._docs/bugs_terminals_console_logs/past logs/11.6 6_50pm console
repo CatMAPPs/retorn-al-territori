@@ -1,0 +1,445 @@
+client.ts:23 Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: false, hasPlayer: false, isLoading: false}
+hasLobby
+: 
+false
+hasPlayer
+: 
+false
+isLoading
+: 
+false
+[[Prototype]]
+: 
+Object
+useLobby.ts:307 📤 useLobby returning with reactive state: 
+{lobby: null, player: null, isLoading: false}
+isLoading
+: 
+false
+lobby
+: 
+null
+player
+: 
+null
+[[Prototype]]
+: 
+Object
+MultiplayerView.vue:21 🎯 MultiplayerView mounted, initial state: 
+{lobby: null, player: null, isLoading: false}
+isLoading
+: 
+false
+lobby
+: 
+null
+player
+: 
+null
+[[Prototype]]
+: 
+Object
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: false, hasPlayer: false, isLoading: false}
+hasLobby
+: 
+false
+hasPlayer
+: 
+false
+isLoading
+: 
+false
+[[Prototype]]
+: 
+Object
+useLobby.ts:307 📤 useLobby returning with reactive state: 
+{lobby: null, player: null, isLoading: false}
+isLoading
+: 
+false
+lobby
+: 
+null
+player
+: 
+null
+[[Prototype]]
+: 
+Object
+LobbyCreateJoin.vue:16 🏗️ LobbyCreateJoin.handleCreateLobby called!
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:86 💾 About to call setLobby...
+lobbyStore.ts:55 🏪 STORE: setLobby called with: 
+{lobby: {…}, player: {…}}
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+lobbyStore.ts:62 🏪 STORE: setLobby completed, new state: 
+{currentLobby: {…}, currentPlayer: {…}, players: Array(0), figures: Array(0), currentRound: 0, …}
+currentFigure
+: 
+null
+currentLobby
+: 
+{id: '3a828f2f-30b8-4509-b53d-73bfdcb45d5d', room_code: 'CFP57V', host_id: '2ac7adfc-3034-4e31-b812-72644d614b21', status: 'waiting', current_round: 0, …}
+currentPlayer
+: 
+{id: '742ff10d-d221-4d08-95e5-e0026561890a', lobby_id: '3a828f2f-30b8-4509-b53d-73bfdcb45d5d', user_id: '2ac7adfc-3034-4e31-b812-72644d614b21', username: 'testboyo', score: 0, …}
+currentRound
+: 
+0
+endRound
+: 
+(submissions) => {…}
+error
+: 
+null
+figures
+: 
+[]
+isLoading
+: 
+true
+isRoundActive
+: 
+false
+players
+: 
+[]
+reset
+: 
+() => set(initialState)
+roundStartTime
+: 
+null
+roundSubmissions
+: 
+[]
+setError
+: 
+(error) => set({ error })
+setFigures
+: 
+(figures) => set({ figures })
+setLoading
+: 
+(isLoading) => set({ isLoading })
+setLobby
+: 
+(lobby, player) => {…}
+length
+: 
+2
+name
+: 
+"setLobby"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[FunctionLocation]]
+: 
+lobbyStore.ts:54
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[3]
+startRound
+: 
+(roundNumber, figure) => {…}
+updateLobbyStatus
+: 
+(status, currentRound) => {…}
+length
+: 
+2
+name
+: 
+"updateLobbyStatus"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[FunctionLocation]]
+: 
+lobbyStore.ts:67
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[3]
+updatePlayerReady
+: 
+(playerId, ready) => {…}
+length
+: 
+2
+name
+: 
+"updatePlayerReady"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[FunctionLocation]]
+: 
+lobbyStore.ts:89
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[3]
+updatePlayerScore
+: 
+(playerId, score) => {…}
+length
+: 
+2
+name
+: 
+"updatePlayerScore"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[FunctionLocation]]
+: 
+lobbyStore.ts:95
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[3]
+updatePlayers
+: 
+(players) => set({ players })
+[[Prototype]]
+: 
+Object
+useLobby.ts:88 👥 About to call updatePlayers...
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+useLobby.ts:90 🔄 Syncing reactive state after store operations...
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+useLobby.ts:92 ✅ Store operations and sync completed
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: false}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+false
+[[Prototype]]
+: 
+Object
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: false}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+false
+[[Prototype]]
+: 
+Object
+LobbyCreateJoin.vue:19 ✅ createNewLobby completed successfully
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+(...)
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+useLobby.ts:39 🔄 SYNCING: Updating reactive state from store: 
+{hasLobby: true, hasPlayer: true, isLoading: true}
+hasLobby
+: 
+true
+hasPlayer
+: 
+true
+isLoading
+: 
+true
+[[Prototype]]
+: 
+Object

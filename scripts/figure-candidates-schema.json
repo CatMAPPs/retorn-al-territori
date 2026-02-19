@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HistoGuesser Figure Candidates",
+  "description": "Schema for AI-generated historical figure candidate lists. Generate batches of ~25 figures per category.",
+  "type": "object",
+  "required": ["candidates", "metadata"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["generated_at", "batch_id", "target_category"],
+      "properties": {
+        "generated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of generation"
+        },
+        "batch_id": {
+          "type": "string",
+          "description": "Unique batch identifier (e.g., 'politics-batch-1')"
+        },
+        "target_category": {
+          "type": "string",
+          "enum": ["politics", "military", "science", "religion", "culture", "exploration", "social", "business"],
+          "description": "Primary category this batch targets"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Optional notes about this batch"
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "birth_year", "hometown", "description", "category", "difficulty", "wikipedia_page"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Canonical name (e.g., 'Alexander Hamilton')",
+            "minLength": 2
+          },
+          "aliases": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Common name variations, nicknames, alternate spellings",
+            "default": []
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "Birth year (negative for BCE, e.g., -356 for 356 BCE)"
+          },
+          "death_year": {
+            "type": ["integer", "null"],
+            "description": "Death year or null if still living"
+          },
+          "hometown": {
+            "type": "string",
+            "description": "Birthplace using modern city/country names (e.g., 'Ulm, Germany')",
+            "minLength": 2
+          },
+          "description": {
+            "type": "string",
+            "description": "50-100 word description blending humor and facts. Should be engaging for a game context.",
+            "minLength": 50,
+            "maxLength": 600
+          },
+          "category": {
+            "type": "string",
+            "enum": ["politics", "military", "science", "religion", "culture", "exploration", "social", "business"],
+            "description": "Primary category (must be one of the 8 game categories)"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["easy", "medium", "hard"],
+            "description": "How well-known this figure is. Easy = household name, Hard = specialist knowledge."
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Additional descriptive tags (e.g., ['president', 'founding_father']). First tag should match category.",
+            "minItems": 1
+          },
+          "wikipedia_page": {
+            "type": "string",
+            "description": "Exact Wikipedia article title (e.g., 'Alexander_Hamilton'). Used for validation.",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "examples": [
+    {
+      "metadata": {
+        "generated_at": "2026-02-13T00:00:00Z",
+        "batch_id": "politics-batch-1",
+        "target_category": "politics"
+      },
+      "candidates": [
+        {
+          "name": "Alexander Hamilton",
+          "aliases": ["A. Ham"],
+          "birth_year": 1755,
+          "death_year": 1804,
+          "hometown": "Charlestown, Saint Kitts and Nevis",
+          "description": "The original 'immigrant who got the job done.' Hamilton went from Caribbean orphan to America's first Treasury Secretary, creating the financial system, founding the Coast Guard, and somehow finding time to write 51 of the 85 Federalist Papers. His rivalry with Aaron Burr ended exactly how you'd expect a political feud to end in the 1800s.",
+          "category": "politics",
+          "difficulty": "easy",
+          "tags": ["politics", "founding_father", "economist"],
+          "wikipedia_page": "Alexander_Hamilton"
+        }
+      ]
+    }
+  ]
+}

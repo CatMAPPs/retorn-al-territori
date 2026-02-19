@@ -1,0 +1,164 @@
+Creator Relevant Console Logs:
+...
+LobbyCreateJoin.vue:37 ✅ createNewLobby completed successfully
+realtime.ts:173 📡 Channel subscription status for lobby:13638b07-7808-40c6-825e-949c2eccd456: SUBSCRIBED 
+realtime.ts:176 ✅ Successfully subscribed to lobby:13638b07-7808-40c6-825e-949c2eccd456
+realtime.ts:196 🔗 Channel joined for lobby:13638b07-7808-40c6-825e-949c2eccd456
+realtime.ts:200 👋 Channel left for lobby:13638b07-7808-40c6-825e-949c2eccd456
+realtime.ts:204 💥 Channel system error for lobby:13638b07-7808-40c6-825e-949c2eccd456: Object
+(anonymous) @ realtime.ts:204Understand this error
+realtime.ts:61 📢 REALTIME: Player joined lobby via broadcast Object
+useLobby.ts:374 👥 REALTIME CALLBACK: Player joined, refreshing players list
+useLobby.ts:378 👥 REALTIME CALLBACK: Got players from DB: 2
+lobbyStore.ts:35 🏪 STORE: updatePlayers called with 2 players
+lobbyStore.ts:36 🏪 STORE: Current players: Array(1)
+lobbyStore.ts:37 🏪 STORE: New players: Array(2)
+lobbyStore.ts:41 🏪 STORE: updatePlayers completed - fresh array assigned
+useLobby.ts:380 👥 REALTIME CALLBACK: Updated store with players
+MultiplayerView.vue:46 🎯 MultiplayerView store changed: Object
+LobbyWaitingRoom.vue:33 🎯 LobbyWaitingRoom players changed: Object
+LobbyWaitingRoom.vue:45 🎯 LobbyWaitingRoom allPlayersReady computed: false players: Array(2)
+LobbyWaitingRoom.vue:51 🎯 LobbyWaitingRoom canStartGame computed: false Object
+realtime.ts:67 📢 REALTIME: Player ready status updated via broadcast Object
+realtime.ts:68 📢 REALTIME: About to call onPlayerReady callback with userId: 26aa8060-5887-4a29-8b5a-2356ebc0cafb
+useLobby.ts:397 👥 REALTIME CALLBACK: Player ready status changed for player: 26aa8060-5887-4a29-8b5a-2356ebc0cafb
+useLobby.ts:399 👥 REALTIME CALLBACK: About to refresh players list for lobby: 13638b07-7808-40c6-825e-949c2eccd456
+realtime.ts:71 📢 REALTIME: onPlayerReady callback called successfully
+useLobby.ts:402 👥 REALTIME CALLBACK: Server players: Array(2)
+useLobby.ts:417 👥 REALTIME CALLBACK: Current user optimistic state - server: false local: false
+useLobby.ts:429 👥 REALTIME CALLBACK: Final reconciled players: Array(2)
+useLobby.ts:431 👥 REALTIME CALLBACK: About to update store with reconciled players
+lobbyStore.ts:35 🏪 STORE: updatePlayers called with 2 players
+lobbyStore.ts:36 🏪 STORE: Current players: Array(2)
+lobbyStore.ts:37 🏪 STORE: New players: Array(2)
+lobbyStore.ts:41 🏪 STORE: updatePlayers completed - fresh array assigned
+useLobby.ts:433 👥 REALTIME CALLBACK: Updated store after ready change - reactivity is automatic!
+MultiplayerView.vue:46 🎯 MultiplayerView store changed: Object
+LobbyWaitingRoom.vue:33 🎯 LobbyWaitingRoom players changed: Object
+LobbyWaitingRoom.vue:45 🎯 LobbyWaitingRoom allPlayersReady computed: false players: Array(2)
+LobbyWaitingRoom.vue:51 🎯 LobbyWaitingRoom canStartGame computed: false Object
+LobbyWaitingRoom.vue:69 🎯 handleToggleReady called in component
+useLobby.ts:165 🎯 toggleReady called
+useLobby.ts:173 🎯 toggleReady: Current ready state: false → New state: true
+useLobby.ts:176 ⚡ toggleReady: Applying optimistic local update
+lobbyStore.ts:71 🏪 STORE: updatePlayerReady called for player dc5d785a-6ed9-48f6-bc84-e5721dc7976e ready: true
+lobbyStore.ts:78 🏪 STORE: updatePlayerReady completed - fresh array assigned
+useLobby.ts:180 🔄 toggleReady: Updating database...
+MultiplayerView.vue:46 🎯 MultiplayerView store changed: Object
+LobbyWaitingRoom.vue:33 🎯 LobbyWaitingRoom players changed: Object
+LobbyWaitingRoom.vue:45 🎯 LobbyWaitingRoom allPlayersReady computed: true players: Array(2)
+LobbyWaitingRoom.vue:51 🎯 LobbyWaitingRoom canStartGame computed: true Object
+queries.ts:731 📢 Broadcasted player ready event for 23fb740b-4843-4549-8f1b-93bb20822714 ready: true
+useLobby.ts:187 ✅ toggleReady: Database update completed - optimistic update confirmed
+LobbyWaitingRoom.vue:74 🎮 LobbyWaitingRoom: Start Game button clicked
+LobbyWaitingRoom.vue:75 🎮 LobbyWaitingRoom: Current state: Object
+useLobby.ts:203 🎮 startMultiplayerGame called for lobby: 13638b07-7808-40c6-825e-949c2eccd456
+useLobby.ts:206 ⏳ Setting loading state for game start
+useLobby.ts:210 🚀 Calling startGame API...
+useLobby.ts:35 🧹 Cleaning up realtime subscription
+queries.ts:617 🎮 Updating lobby status to in_progress...
+queries.ts:633 ✅ Lobby status updated successfully
+queries.ts:644 📢 Broadcasted game started event for lobby: 13638b07-7808-40c6-825e-949c2eccd456
+useLobby.ts:212 ✅ startGame API completed - game started successfully!
+useLobby.ts:213 ⏳ Waiting for realtime status update to transition UI...
+useLobby.ts:218 ⏰ Realtime transition timeout - forcing game start manually
+(anonymous) @ useLobby.ts:218Understand this warning
+useLobby.ts:225 🔄 Fallback: Manually updating lobby status to in_progress
+MultiplayerView.vue:46 🎯 MultiplayerView store changed: Object
+MultiplayerView.vue:56 🎯 MultiplayerView: Lobby status changed: waiting → in_progress
+MultiplayerView.vue:58 🎮 MultiplayerView: Lobby status is now in_progress - should show game screen
+useLobby.ts:235 ✅ Fallback game start completed
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: Object
+useLobby.ts:560 📤 useLobby returning actions only - state accessed via store directly
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+LobbyGameplay.vue:203 🗺️ Map clicked: Proxy(Object) hasSubmitted: false
+LobbyGameplay.vue:207 📍 Set guessedLat: 42.05337156043361 guessedLon: -79.45312500000001
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+LobbyGameplay.vue:102 🎯 handleSubmitGuess called
+LobbyGameplay.vue:103 canSubmit: true currentFigure: true
+LobbyGameplay.vue:133 ✅ Client-side validation passed: Object
+LobbyGameplay.vue:136 ✅ Validation passed - proceeding with submission
+LobbyGameplay.vue:162 📊 Calculated scores: Object
+useLobby.ts:270 🎯 submitGuess called with: Object
+useLobby.ts:285 🔄 Calling submitMultiplayerGuess...
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+queries.ts:688 📢 Broadcast sent for submission: 0a23fff6-3236-4a1c-8632-8afac6a982da
+useLobby.ts:301 ✅ submitMultiplayerGuess returned: Object
+useLobby.ts:304 🎯 Adding own submission to local roundSubmissions: 0a23fff6-3236-4a1c-8632-8afac6a982da
+useLobby.ts:307 📊 roundSubmissions now has 1 items
+LobbyGameplay.vue:179 ✅ submitGuess completed successfully, setting hasSubmitted = true
+LobbyGameplay.vue:182 ✅ hasSubmitted set to true, button should be disabled
+LobbyGameplay.vue:186 🎯 Adding own submission to local state: Object
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+realtime.ts:162 📢 REALTIME: Submission received via broadcast: Object
+realtime.ts:163 📨 REALTIME: About to call onSubmissionReceived callback via broadcast
+useLobby.ts:495 📨 Submission received: Object
+useLobby.ts:508 📊 Added new submission from user, total now: 2 players: 2
+useLobby.ts:523 🎯 All players submitted - reveal phase should start in UI
+realtime.ts:166 📨 REALTIME: onSubmissionReceived callback completed successfully via broadcast
+LobbyGameplay.vue:214 🎯 All players submitted - showing reveal phase
+LobbyGameplay.vue:215 🎯 Current figure for reveal: Sigmund Freud
+LobbyGameplay.vue:219 ⏸️ Timer paused during reveal phase
+RevealPhase.vue:123 RevealPhase figure data: Object
+LobbyGameplay.vue:228 🎯 advanceRound called - emitting to parent for round progression
+MultiplayerView.vue:74 🎯 handleAdvanceRound called in MultiplayerView
+MultiplayerView.vue:83 🏁 Ending current round and updating scores
+MultiplayerView.vue:98 🎲 Current round: 1 Next round would be: 2
+...
+{Removed logs for rounds 2-9 for brevity}
+...
+MultiplayerView.vue:98 🎲 Current round: 9 Next round would be: 10
+MultiplayerView.vue:106 🎯 Starting next round: 10
+MultiplayerView.vue:110 🎯 Starting round with figure: Queen Elizabeth I
+MultiplayerView.vue:119 ✅ Round advancement completed
+LobbyGameplay.vue:232 🔄 Resetting UI state for next round
+LobbyGameplay.vue:243 ▶️ Resuming timer for next round
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+LobbyGameplay.vue:203 🗺️ Map clicked: Proxy(Object) hasSubmitted: false
+LobbyGameplay.vue:207 📍 Set guessedLat: 52.71300326104201 guessedLon: 0
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+realtime.ts:162 📢 REALTIME: Submission received via broadcast: Object
+realtime.ts:163 📨 REALTIME: About to call onSubmissionReceived callback via broadcast
+useLobby.ts:495 📨 Submission received: Object
+useLobby.ts:508 📊 Added new submission from user, total now: 1 players: 2
+realtime.ts:166 📨 REALTIME: onSubmissionReceived callback completed successfully via broadcast
+LobbyGameplay.vue:102 🎯 handleSubmitGuess called
+LobbyGameplay.vue:103 canSubmit: true currentFigure: true
+LobbyGameplay.vue:133 ✅ Client-side validation passed: Object
+LobbyGameplay.vue:136 ✅ Validation passed - proceeding with submission
+LobbyGameplay.vue:162 📊 Calculated scores: Object
+useLobby.ts:270 🎯 submitGuess called with: Object
+useLobby.ts:285 🔄 Calling submitMultiplayerGuess...
+LobbyGameplay.vue:81 🔘 canSubmit check: Object
+queries.ts:688 📢 Broadcast sent for submission: 575ab240-675e-4023-88ad-0720500753eb
+useLobby.ts:301 ✅ submitMultiplayerGuess returned: Object
+useLobby.ts:304 🎯 Adding own submission to local roundSubmissions: 575ab240-675e-4023-88ad-0720500753eb
+useLobby.ts:307 📊 roundSubmissions now has 2 items
+useLobby.ts:311 🎯 All players submitted (including self) - reveal phase should start in UI
+LobbyGameplay.vue:214 🎯 All players submitted - showing reveal phase
+LobbyGameplay.vue:215 🎯 Current figure for reveal: Queen Elizabeth I
+LobbyGameplay.vue:219 ⏸️ Timer paused during reveal phase
+RevealPhase.vue:123 RevealPhase figure data: Object
+LobbyGameplay.vue:179 ✅ submitGuess completed successfully, setting hasSubmitted = true
+LobbyGameplay.vue:182 ✅ hasSubmitted set to true, button should be disabled
+LobbyGameplay.vue:186 🎯 Adding own submission to local state: Object
+LobbyGameplay.vue:228 🎯 advanceRound called - emitting to parent for round progression
+MultiplayerView.vue:74 🎯 handleAdvanceRound called in MultiplayerView
+MultiplayerView.vue:83 🏁 Ending current round and updating scores
+MultiplayerView.vue:98 🎲 Current round: 10 Next round would be: 11
+MultiplayerView.vue:102 🏆 Game completed! All 10 rounds finished
+MultiplayerView.vue:119 ✅ Round advancement completed
+LobbyGameplay.vue:232 🔄 Resetting UI state for next round
+LobbyGameplay.vue:243 ▶️ Resuming timer for next round
+MultiplayerView.vue:46 🎯 MultiplayerView store changed: Object
+MultiplayerView.vue:56 🎯 MultiplayerView: Lobby status changed: in_progress → finished
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: Object
+useLobby.ts:560 📤 useLobby returning actions only - state accessed via store directly
+
+

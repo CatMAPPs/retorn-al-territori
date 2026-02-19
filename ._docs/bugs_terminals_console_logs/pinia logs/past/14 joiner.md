@@ -1,0 +1,193 @@
+🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: {isLoading: false, currentLobby: null, hasSetLoading: true}
+useLobby.ts:497 📤 useLobby returning actions only - state accessed via store directly
+MultiplayerView.vue:36 🔍 lobbyStore reactive refs: {lobby: ObjectRefImpl, player: ObjectRefImpl, isLoading: ObjectRefImpl}
+MultiplayerView.vue:37 🎯 MultiplayerView mounted, initial state: {lobby: null, player: null, isLoading: false}
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: null, player: null, playersCount: 0, players: Array(0)}
+MultiplayerView.vue:55 🎯 MultiplayerView: Lobby status changed: undefined → undefined
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: {isLoading: false, currentLobby: null, hasSetLoading: true}
+useLobby.ts:497 📤 useLobby returning actions only - state accessed via store directly
+LobbyCreateJoin.vue:20 🎨 LobbyCreateJoin component mounted!
+LobbyCreateJoin.vue:21 🔍 LobbyCreateJoin reactive values: {isLoading: false, hasCreateNewLobby: true, hasJoinExistingLobby: true}
+MultiplayerView.vue:30 🎯 MultiplayerView mounted - cleaning up any existing lobby state
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: null, player: null, playersCount: 0, players: Array(0)}
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+LobbyCreateJoin.vue:44 🏗️ LobbyCreateJoin.handleJoinLobby called with roomCode: ZW7ZNH
+LobbyCreateJoin.vue:52 🚀 Calling joinExistingLobby...
+useLobby.ts:103 🚪 joinExistingLobby called with roomCode: ZW7ZNH
+useLobby.ts:110 👤 Authenticated user: 4cea1883-91bc-431f-ba4f-eddc93a8b4c6
+useLobby.ts:113 🧹 Cleaning up any existing lobby state before joining
+useLobby.ts:481 🧹 Cleaning up lobby state and realtime subscriptions
+useLobby.ts:491 🔄 Resetting lobby store
+useLobby.ts:494 ✅ Cleanup completed
+useLobby.ts:120 ⏳ Setting loading state to true
+useLobby.ts:124 🔄 Calling joinLobby API...
+queries.ts:422 🔍 joinLobby: Looking for lobby with code: ZW7ZNH
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: null, player: null, playersCount: 0, players: Array(0)}
+useLobby.ts:35 🧹 Cleaning up realtime subscription
+queries.ts:439 ✅ joinLobby: Found lobby: 0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22 status: waiting
+queries.ts:445 🔍 joinLobby: Checking player capacity for lobby: 0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+queries.ts:458 ✅ joinLobby: Current player count: 1
+queries.ts:464 🔍 joinLobby: Checking if user already in lobby: 4cea1883-91bc-431f-ba4f-eddc93a8b4c6
+queries.ts:497 📝 joinLobby: Adding player to lobby
+queries.ts:515 ✅ joinLobby: Player added successfully: e755ea5a-7d69-413d-9f0a-bf9ca4b1c8b2
+realtime.ts:203 Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.
+send @ @supabase_supabase-js.js?v=a926d579:2805
+broadcastLobbyEvent @ realtime.ts:203
+joinLobby @ queries.ts:520
+await in joinLobby
+joinExistingLobby @ useLobby.ts:125
+handleJoinLobby @ LobbyCreateJoin.vue:53
+(anonymous) @ chunk-LG6AQRJS.js?v=a926d579:12326
+callWithErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2296
+callWithAsyncErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2303
+invoker @ chunk-LG6AQRJS.js?v=a926d579:11335Understand this warning
+queries.ts:521 📢 Broadcasted player joined event for Anonymous
+queries.ts:527 🎉 joinLobby: Successfully joined lobby: 0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+useLobby.ts:131 ✅ joinLobby API returned: {lobbyId: '0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22', roomCode: 'ZW7ZNH', playerId: 'e755ea5a-7d69-413d-9f0a-bf9ca4b1c8b2'}
+useLobby.ts:133 📊 Fetching updated players list...
+useLobby.ts:135 ✅ Got players list: 2 players
+useLobby.ts:137 💾 Setting lobby and players in store...
+lobbyStore.ts:26 🏪 STORE: setLobby called with: {lobby: {…}, player: {…}}
+lobbyStore.ts:31 🏪 STORE: setLobby completed, currentLobby: Proxy(Object) {id: '0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22', room_code: 'ZW7ZNH', host_id: '360c97e2-504f-420e-a903-3dd272eed80d', status: 'waiting', current_round: 0, …}
+lobbyStore.ts:35 🏪 STORE: updatePlayers called with 2 players
+lobbyStore.ts:36 🏪 STORE: Current players: []
+lobbyStore.ts:37 🏪 STORE: New players: (2) [{…}, {…}]
+lobbyStore.ts:41 🏪 STORE: updatePlayers completed - fresh array assigned
+useLobby.ts:140 ✅ Store updated successfully
+useLobby.ts:143 🎯 About to setup realtime subscription for join...
+useLobby.ts:306 🔌 Setting up realtime subscription for lobby: 0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+realtime.ts:21 📡 Subscribing to channel: lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+useLobby.ts:146 ✅ Realtime subscription setup completed for join
+useLobby.ts:151 🎉 joinExistingLobby completed successfully
+useLobby.ts:159 🔄 Setting loading state to false
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: {…}, player: {…}, playersCount: 2, players: Array(2)}
+MultiplayerView.vue:55 🎯 MultiplayerView: Lobby status changed: undefined → waiting
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: {isLoading: false, currentLobby: Proxy(Object), hasSetLoading: true}
+useLobby.ts:497 📤 useLobby returning actions only - state accessed via store directly
+LobbyWaitingRoom.vue:26 🎯 LobbyWaitingRoom props: {playersCount: 2, players: Array(2)}
+LobbyWaitingRoom.vue:45 🎯 LobbyWaitingRoom allPlayersReady computed: false players: (2) [{…}, {…}]
+LobbyCreateJoin.vue:54 ✅ joinExistingLobby completed successfully
+realtime.ts:154 📡 Channel subscription status for lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22: SUBSCRIBED 
+realtime.ts:157 ✅ Successfully subscribed to lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+realtime.ts:177 🔗 Channel joined for lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+realtime.ts:181 👋 Channel left for lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+realtime.ts:185 💥 Channel system error for lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22: {message: 'Unable to subscribe to changes with given paramete…, "eq", "0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22"}]]', status: 'error', extension: 'postgres_changes', channel: 'lobby:0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22'}
+(anonymous) @ realtime.ts:185
+(anonymous) @ @supabase_supabase-js.js?v=a926d579:3002
+_trigger @ @supabase_supabase-js.js?v=a926d579:2987
+(anonymous) @ @supabase_supabase-js.js?v=a926d579:3509
+(anonymous) @ @supabase_supabase-js.js?v=a926d579:3509
+decode @ @supabase_supabase-js.js?v=a926d579:2038
+_onConnMessage @ @supabase_supabase-js.js?v=a926d579:3494
+conn.onmessage @ @supabase_supabase-js.js?v=a926d579:3547Understand this error
+LobbyWaitingRoom.vue:69 🎯 handleToggleReady called in component
+useLobby.ts:165 🎯 toggleReady called
+useLobby.ts:173 🎯 toggleReady: Current ready state: false → New state: true
+useLobby.ts:176 ⚡ toggleReady: Applying optimistic local update
+lobbyStore.ts:71 🏪 STORE: updatePlayerReady called for player e755ea5a-7d69-413d-9f0a-bf9ca4b1c8b2 ready: true
+lobbyStore.ts:78 🏪 STORE: updatePlayerReady completed - fresh array assigned
+useLobby.ts:180 🔄 toggleReady: Updating database...
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: {…}, player: {…}, playersCount: 2, players: Array(2)}
+LobbyWaitingRoom.vue:33 🎯 LobbyWaitingRoom players changed: {old: Array(2), new: Array(2)}
+LobbyWaitingRoom.vue:45 🎯 LobbyWaitingRoom allPlayersReady computed: false players: (2) [{…}, {…}]
+queries.ts:720 📢 Broadcasted player ready event for 4cea1883-91bc-431f-ba4f-eddc93a8b4c6 ready: true
+useLobby.ts:187 ✅ toggleReady: Database update completed - optimistic update confirmed
+realtime.ts:67 📢 REALTIME: Player ready status updated via broadcast {ready: true, userId: '360c97e2-504f-420e-a903-3dd272eed80d'}
+realtime.ts:68 📢 REALTIME: About to call onPlayerReady callback with userId: 360c97e2-504f-420e-a903-3dd272eed80d
+useLobby.ts:341 👥 REALTIME CALLBACK: Player ready status changed for player: 360c97e2-504f-420e-a903-3dd272eed80d
+useLobby.ts:343 👥 REALTIME CALLBACK: About to refresh players list for lobby: 0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+realtime.ts:71 📢 REALTIME: onPlayerReady callback called successfully
+useLobby.ts:346 👥 REALTIME CALLBACK: Server players: (2) [{…}, {…}]
+useLobby.ts:361 👥 REALTIME CALLBACK: Current user optimistic state - server: true local: true
+useLobby.ts:373 👥 REALTIME CALLBACK: Final reconciled players: (2) [{…}, {…}]
+useLobby.ts:375 👥 REALTIME CALLBACK: About to update store with reconciled players
+lobbyStore.ts:35 🏪 STORE: updatePlayers called with 2 players
+lobbyStore.ts:36 🏪 STORE: Current players: (2) [{…}, {…}]
+lobbyStore.ts:37 🏪 STORE: New players: (2) [{…}, {…}]
+lobbyStore.ts:41 🏪 STORE: updatePlayers completed - fresh array assigned
+useLobby.ts:377 👥 REALTIME CALLBACK: Updated store after ready change - reactivity is automatic!
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: {…}, player: {…}, playersCount: 2, players: Array(2)}
+LobbyWaitingRoom.vue:33 🎯 LobbyWaitingRoom players changed: {old: Array(2), new: Array(2)}
+LobbyWaitingRoom.vue:45 🎯 LobbyWaitingRoom allPlayersReady computed: true players: (2) [{…}, {…}]
+LobbyWaitingRoom.vue:51 🎯 LobbyWaitingRoom canStartGame computed: false {isHost: false, allPlayersReady: true, playerCount: 2}
+realtime.ts:79 📢 REALTIME: Game started via broadcast {current_round: 1, lobbyId: '0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22', status: 'in_progress', timestamp: '2025-11-09T03:59:24.603Z'}
+realtime.ts:80 🎮 REALTIME: Game started broadcast received - calling onGameStarted
+useLobby.ts:384 🎮 REALTIME CALLBACK: onGameStarted triggered for lobby: 0ed99fbd-d1e2-42d5-bcd0-15052e0f9c22
+useLobby.ts:387 📊 Fetching updated lobby with players...
+realtime.ts:83 🎮 REALTIME: onGameStarted callback completed successfully
+useLobby.ts:389 ✅ Got updated lobby - status: in_progress current_round: 1
+useLobby.ts:391 💾 Updating lobby status in store...
+useLobby.ts:393 ✅ Lobby status updated to: in_progress
+useLobby.ts:395 🎯 Loading figures for game...
+useLobby.ts:398 📖 Loading figure: 53190f65-066e-4ea7-911b-7cc31946dd66
+MultiplayerView.vue:45 🎯 MultiplayerView store changed: {lobby: {…}, player: {…}, playersCount: 2, players: Array(2)}
+MultiplayerView.vue:55 🎯 MultiplayerView: Lobby status changed: waiting → in_progress
+MultiplayerView.vue:57 🎮 MultiplayerView: Lobby status is now in_progress - should show game screen
+MultiplayerView.vue:181 [Vue warn]: Property "roundSubmissions" was accessed during render but is not defined on instance. 
+  at <MultiplayerView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) {__v_skip: true} > > 
+  at <RouterView> 
+  at <App>
+warn$1 @ chunk-LG6AQRJS.js?v=a926d579:2149
+get @ chunk-LG6AQRJS.js?v=a926d579:5312
+_sfc_render @ MultiplayerView.vue:181
+renderComponentRoot @ chunk-LG6AQRJS.js?v=a926d579:8705
+componentUpdateFn @ chunk-LG6AQRJS.js?v=a926d579:7588
+run @ chunk-LG6AQRJS.js?v=a926d579:505
+runIfDirty @ chunk-LG6AQRJS.js?v=a926d579:543
+callWithErrorHandling @ chunk-LG6AQRJS.js?v=a926d579:2296
+flushJobs @ chunk-LG6AQRJS.js?v=a926d579:2504
+Promise.then
+queueFlush @ chunk-LG6AQRJS.js?v=a926d579:2418
+queueJob @ chunk-LG6AQRJS.js?v=a926d579:2413
+baseWatchOptions.scheduler @ chunk-LG6AQRJS.js?v=a926d579:8410
+effect2.scheduler @ chunk-LG6AQRJS.js?v=a926d579:2042
+trigger @ chunk-LG6AQRJS.js?v=a926d579:533
+endBatch @ chunk-LG6AQRJS.js?v=a926d579:591
+notify @ chunk-LG6AQRJS.js?v=a926d579:853
+trigger @ chunk-LG6AQRJS.js?v=a926d579:827
+set value @ chunk-LG6AQRJS.js?v=a926d579:1706
+updateLobbyStatus @ lobbyStore.ts:46
+wrappedAction @ pinia.js?v=a926d579:5508
+store.<computed> @ pinia.js?v=a926d579:5205
+onGameStarted @ useLobby.ts:392
+await in onGameStarted
+(anonymous) @ realtime.ts:82
+(anonymous) @ @supabase_supabase-js.js?v=a926d579:3002
+_trigger @ @supabase_supabase-js.js?v=a926d579:2987
+(anonymous) @ @supabase_supabase-js.js?v=a926d579:3509
+(anonymous) @ @supabase_supabase-js.js?v=a926d579:3509
+decode @ @supabase_supabase-js.js?v=a926d579:2038
+_onConnMessage @ @supabase_supabase-js.js?v=a926d579:3494
+conn.onmessage @ @supabase_supabase-js.js?v=a926d579:3547Understand this warning
+useLobby.ts:20 🏗️ useLobby composable called
+useLobby.ts:23 🏪 Initializing lobbyStore...
+useLobby.ts:25 🏪 lobbyStore initialized: {isLoading: false, currentLobby: Proxy(Object), hasSetLoading: true}
+useLobby.ts:497 📤 useLobby returning actions only - state accessed via store directly
+useLobby.ts:35 🧹 Cleaning up realtime subscription
+useLobby.ts:398 📖 Loading figure: 71855ba9-176a-4d37-8e66-ad7d76a030bc
+useLobby.ts:398 📖 Loading figure: 57706cbc-ffa0-4dcb-b98a-2ad5764135f8
+useLobby.ts:398 📖 Loading figure: 4f612e2c-45c7-4d75-ba4b-512ea3d385ba
+useLobby.ts:398 📖 Loading figure: 8060d265-cd30-46a3-af00-aebe877c5f8c
+useLobby.ts:398 📖 Loading figure: 96c5921a-6920-43cd-bcdb-990386420862
+useLobby.ts:398 📖 Loading figure: 486b5a5c-b5d5-4fff-84b5-5cf232897d51
+useLobby.ts:398 📖 Loading figure: e26ac096-49f6-42fa-bfba-e503551f8c66
+useLobby.ts:398 📖 Loading figure: f42b31f2-0c7b-4ea7-88d0-0896679aa765
+useLobby.ts:398 📖 Loading figure: 2bdee868-9128-4389-8cd4-ff272d0f3038
+useLobby.ts:402 ✅ Loaded 10 figures
+useLobby.ts:404 💾 Setting figures in store...
+useLobby.ts:407 🎲 Starting first round...
+useLobby.ts:410 ✅ Started round 1 with figure: Charles Darwin
+useLobby.ts:415 🔄 Setting loading to false after game start
+useLobby.ts:418 🎮 Game started successfully!
+MultiplayerView.vue:181 [Vue warn]: Property "roundSubmissions" was accessed during render but is not defined on instance. 
+  at <MultiplayerView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) {__v_skip: true} > > 
+  at <RouterView> 
+  at <App>

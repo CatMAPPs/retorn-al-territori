@@ -1,0 +1,12 @@
+🏗️ useLobby composable called
+useLobby.ts:314 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+MultiplayerView.vue:14 🔍 lobbyComposable: {lobby: null, player: null, players: Proxy(Array), figures: Proxy(Array), currentRound: 0, …}
+MultiplayerView.vue:15 🔍 lobbyComposable.error: null
+MultiplayerView.vue:18 🎯 MultiplayerView mounted, initial state: {lobby: null, player: null, isLoading: false}
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:314 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...

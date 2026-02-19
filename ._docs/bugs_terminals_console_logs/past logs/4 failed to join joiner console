@@ -1,0 +1,36 @@
+client.ts:23 Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+{hasLobby: false, hasPlayer: false, isLoading: false}
+useLobby.ts:328 📤 useLobby returning with reactive state: 
+{lobby: null, player: null, isLoading: false}
+MultiplayerView.vue:14 🔍 lobbyComposable: 
+{lobby: RefImpl, player: RefImpl, players: RefImpl, figures: RefImpl, currentRound: RefImpl, …}
+MultiplayerView.vue:15 🔍 lobbyComposable.error: 
+RefImpl {dep: Dep, __v_isRef: true, __v_isShallow: false, _rawValue: null, _value: null}
+MultiplayerView.vue:18 🎯 MultiplayerView mounted, initial state: 
+{lobby: null, player: null, isLoading: false}
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+{hasLobby: false, hasPlayer: false, isLoading: false}
+useLobby.ts:328 📤 useLobby returning with reactive state: 
+{lobby: null, player: null, isLoading: false}
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+useLobby.ts:37 🔄 SYNCING: Updating refs from store: 
+{hasLobby: false, hasPlayer: false, isLoading: true}
+MultiplayerView.vue:34 ⏳ LOADING CHANGED: 
+{old: false, new: true}
+useLobby.ts:65 🧹 Unsubscribing from lobbyStore
+﻿
+

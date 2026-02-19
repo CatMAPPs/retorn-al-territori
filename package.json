@@ -1,0 +1,39 @@
+{
+  "name": "histoguesser",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-pattern .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "maplibre-gl": "^5.0.1",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "autoprefixer": "^10.4.16",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.6.3",
+    "vite": "^7.1.12",
+    "vue-tsc": "^2.1.10"
+  }
+}

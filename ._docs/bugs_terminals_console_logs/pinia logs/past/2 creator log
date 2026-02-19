@@ -1,0 +1,28 @@
+client.ts:23 Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.
+_GoTrueClient @ @supabase_supabase-js.js?v=a926d579:8302
+SupabaseAuthClient @ @supabase_supabase-js.js?v=a926d579:10622
+_initSupabaseAuthClient @ @supabase_supabase-js.js?v=a926d579:10788
+SupabaseClient @ @supabase_supabase-js.js?v=a926d579:10664
+createClient @ @supabase_supabase-js.js?v=a926d579:10830
+(anonymous) @ client.ts:23Understand this warning
+authStore.ts:47 👂 Setting up auth state listener...
+authStore.ts:73 ✅ Auth store initialized
+authStore.ts:49 🔄 Auth state change: INITIAL_SESSION Session exists
+authStore.ts:49 🔄 Auth state change: SIGNED_IN Session exists
+authStore.ts:53 🔑 User signed in, ensuring consistency...
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:323 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+MultiplayerView.vue:14 🔍 lobbyComposable: {lobby: null, player: null, players: Proxy(Array), figures: Proxy(Array), currentRound: 0, …}
+MultiplayerView.vue:15 🔍 lobbyComposable.error: null
+MultiplayerView.vue:18 🎯 MultiplayerView mounted, initial state: {lobby: null, player: null, isLoading: false}
+useLobby.ts:19 🏗️ useLobby composable called
+useLobby.ts:323 📤 useLobby returning with Pinia reactive state - automatic reactivity!
+LobbyCreateJoin.vue:13 🎨 LobbyCreateJoin component mounted!
+LobbyCreateJoin.vue:14 🔍 LobbyCreateJoin props: {isLoading: undefined}isLoading: undefined[[Prototype]]: Object
+LobbyCreateJoin.vue:21 🏗️ LobbyCreateJoin.handleCreateLobby called!
+LobbyCreateJoin.vue:22 🔍 Component state: {isLoading: undefined}
+LobbyCreateJoin.vue:24 🚀 Calling createNewLobby...
+useLobby.ts:35 🎯 createNewLobby called - checking auth...
+useLobby.ts:37 👤 Auth user: {id: '360c97e2-504f-420e-a903-3dd272eed80d', email: 'test3@yahoo.com', username: 'test3', avatar_url: null, created_at: '2025-11-06T02:48:49.099448+00:00', …}
+useLobby.ts:45 ⏳ Setting loading state...
+useLobby.ts:49 🏗️ Creating lobby for user: 360c97e2-504f-420e-a903-3dd272eed80d test3

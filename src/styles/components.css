@@ -1,0 +1,72 @@
+/* Component-specific style overrides */
+
+/* Leaflet map styling for noir theme */
+.leaflet-container {
+  @apply bg-noir-surface;
+}
+
+.leaflet-control {
+  @apply border-noir-gold/30;
+}
+
+.leaflet-bar a {
+  @apply bg-noir-surface text-noir-text border-noir-gold/30;
+  @apply hover:bg-noir-red hover:text-noir-text;
+}
+
+/* Custom marker styling */
+.custom-marker {
+  @apply bg-noir-red border-2 border-noir-gold rounded-full;
+  box-shadow: 0 0 12px rgba(203, 161, 53, 0.6);
+}
+
+/* Timeline slider */
+.timeline-slider {
+  @apply w-full h-2 bg-noir-surface rounded-lg;
+  @apply border border-noir-gold/30;
+}
+
+.timeline-slider::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-noir-gold rounded-full cursor-pointer;
+  @apply hover:bg-noir-gold hover:scale-110;
+  box-shadow: 0 0 8px rgba(203, 161, 53, 0.5);
+}
+
+.timeline-slider::-moz-range-thumb {
+  @apply w-4 h-4 bg-noir-gold rounded-full cursor-pointer border-0;
+  @apply hover:bg-noir-gold hover:scale-110;
+  box-shadow: 0 0 8px rgba(203, 161, 53, 0.5);
+}
+
+/* Loading spinner */
+.spinner {
+  @apply inline-block w-8 h-8 border-4 border-noir-gold/30 border-t-noir-gold rounded-full;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Toast notifications */
+.toast {
+  @apply fixed bottom-4 right-4 z-50;
+  @apply bg-noir-surface border border-noir-gold/30 rounded-lg p-4;
+  @apply shadow-noir-deep;
+  animation: slideUp 300ms ease-out;
+}
+
+.toast.success {
+  @apply border-green-500/50;
+}
+
+.toast.error {
+  @apply border-noir-red;
+}
+
+.toast.warning {
+  @apply border-yellow-500/50;
+}
+
