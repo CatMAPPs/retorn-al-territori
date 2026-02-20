@@ -21,8 +21,8 @@ export function useMap(mapContainer: Ref<HTMLElement | null>, options: UseMapOpt
   const guessedCoordinates = ref<Coordinates | null>(null)
 
   const defaultOptions = {
-    center: [20, 0] as [number, number],
-    zoom: 2,
+    center: [41.7, 1.8] as [number, number],
+    zoom: 6,
     minZoom: 2,
     maxZoom: 18,
   }
@@ -45,18 +45,17 @@ export function useMap(mapContainer: Ref<HTMLElement | null>, options: UseMapOpt
       style: {
         version: 8,
         sources: {
-          osm: {
+          icgc: {
             type: 'raster',
-            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+            tiles: ['https://geoserveis.icgc.cat/servei/catalunya/mapa-base/wmts/estandard/MON3857NW/{z}/{x}/{y}.png'],
             tileSize: 256,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
           },
         },
         layers: [
           {
-            id: 'osm',
+            id: 'icgc',
             type: 'raster',
-            source: 'osm',
+            source: 'icgc',
           },
         ],
       },

@@ -1,152 +1,239 @@
-# HistoGuesser
+# Carto Guesser
 
-A web-based geography and history guessing game where players identify historical figures through portraits, photos, or sculptures.
+Joc de geografia basat en fotografies històriques de Catalunya. L'usuari ha d'identificar la ubicació on va ser feta cada fotografia, clicant al mapa. Desenvolupat per a l'ICGC.
 
-## Game Modes
+## Modes de joc
 
-- **Daily Challenge** - A globally shared 10-round challenge with leaderboards
-- **Free Play** - Casual practice mode with unlimited plays
-- **Multiplayer** - Real-time competitive lobbies for 2-8 players
+- **Repte Diari** — 10 fotografies fixes per dia, iguals per a tothom. El resultat es desa localment.
+- **Joc Lliure** — Pràctica sense límit, ordre aleatori.
 
-## Features
+## Stack tecnològic
 
-- Guess **Who** (name), **Where** (map location), and **When** (birth year) for each historical figure
-- Film Noir themed UI with skeuomorphic design
-- Comprehensive scoring system with spatial, temporal, and name accuracy
-- Real-time multiplayer using Supabase Realtime
-- Streak tracking and global leaderboards
+- **Vite 7** + **Vue 3.5** + **TypeScript 5.6**
+- **TailwindCSS 3.4** — disseny i estils
+- **MapLibre GL JS 5** — mapa interactiu (tiles d'OpenStreetMap)
+- **Pinia / Zustand** — gestió d'estat
+- **GitHub Actions** — desplegament automàtic a GitHub Pages
 
-## Tech Stack
+---
 
-### Frontend
-- **Vite 7** - Fast build tool and dev server
-- **Vue 3.5** - Progressive JavaScript framework
-- **TypeScript 5.6** - Type-safe development
-- **TailwindCSS 3.4** - Utility-first CSS framework
-- **Zustand 5** - Lightweight state management
-- **Leaflet.js 1.9** - Interactive maps with OpenStreetMap
-- **Day.js 1.11** - Lightweight date/time library
+## Posada en marxa local
 
-### Backend
-- **Supabase 2.78** - PostgreSQL database, authentication, and real-time
-- **Vercel** - Frontend hosting and deployment
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ and npm
-- Supabase account and project
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd Histo-Guesser
-```
-
-2. Install dependencies:
-```bash
+git clone https://github.com/CatMAPPs/carto-guesser.git
+cd carto-guesser
 npm install
-```
-
-3. Set up environment variables:
-```bash
-cp .env.example .env
-```
-
-Edit `.env` and add your Supabase credentials:
-```
-VITE_SUPABASE_URL=your-project-url.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key
-```
-
-4. Run the database migrations:
-
-Go to your Supabase project dashboard, navigate to the SQL Editor, and run the migration files in order:
-- `supabase/migrations/001_initial_schema.sql`
-- `supabase/migrations/002_multiplayer_tables.sql`
-- `supabase/migrations/003_row_level_security.sql`
-- `supabase/migrations/004_seed_figures.sql`
-
-### Development
-
-Start the development server:
-```bash
 npm run dev
 ```
 
-The app will be available at `http://localhost:3000`
+L'app estarà disponible a `http://localhost:3000`
 
-### Building for Production
-
-```bash
-npm run build
-npm run preview
-```
-
-### Linting and Formatting
+### Altres comandes
 
 ```bash
-npm run lint
-npm run format
+npm run build      # Genera el build de producció a dist/
+npm run preview    # Previsualitza el build localment
+npm run lint       # Comprova i corregeix el codi
 ```
 
-## Project Structure
+---
+
+## Desplegament (GitHub Pages)
+
+El desplegament és automàtic: cada push a la branca `main` llança el workflow de GitHub Actions que fa el build i publica a GitHub Pages.
+
+URL pública: **https://catmapps.github.io/carto-guesser/**
+
+Per activar-ho per primer cop:
+1. Ves a **Settings → Pages** del repositori
+2. A *Source*, selecciona **GitHub Actions**
+3. Fes un push a `main`
+
+---
+
+## Com afegir fotografies
+
+Les fotografies i les seves metadades es gestionen amb dos fitxers a la carpeta `public/`:
+
+### 1. Afegir la imatge
+
+Copia el fitxer d'imatge (`.jpg`, `.png`, `.webp`) a:
 
 ```
+public/images/nom_del_fitxer.jpg
+```
+
+Recomanacions:
+- Amplada màxima: **1200 px** (per no alentir la càrrega)
+- Format preferit: **JPEG** amb qualitat 80–85%
+- Nom de fitxer sense espais ni accents (ex: `girona_catedral.jpg`)
+
+### 2. Afegir l'entrada al JSON
+
+Obre `public/figures.json` i afegeix una entrada al final de l'array:
+
+```json
+{
+  "id": "7",
+  "nom": "Catedral de Girona",
+  "nom_fitxer": "girona_catedral.jpg",
+  "autor": "Autor desconegut",
+  "lat": 41.9873,
+  "lon": 2.8251,
+  "any_foto": 1920,
+  "descripcio": "Vista de la Catedral de Girona des de la plaça."
+}
+```
+
+| Camp | Tipus | Descripció |
+|---|---|---|
+| `id` | string | Identificador únic (número correllatiu) |
+| `nom` | string | Nom del lloc o descripció breu |
+| `nom_fitxer` | string | Nom del fitxer a `public/images/` |
+| `autor` | string | Autor de la fotografia |
+| `lat` | number | Latitud decimal (ex: `41.9873`) |
+| `lon` | number | Longitud decimal (ex: `2.8251`) |
+| `any_foto` | number | Any aproximat de la fotografia |
+| `descripcio` | string | Descripció mostrada a la pantalla de resultats |
+
+> Per obtenir les coordenades: obre [Google Maps](https://maps.google.com), fes clic dret sobre el punt exacte → *"Quines són les coordenades d'aquí?"*
+
+### 3. Publicar els canvis
+
+```bash
+git add public/images/girona_catedral.jpg public/figures.json
+git commit -m "Afegir fotografia de la Catedral de Girona"
+git push
+```
+
+El workflow redesplegarà automàticament.
+
+---
+
+## Paràmetres configurables
+
+### Puntuació per distància
+
+**Fitxer:** `src/lib/scoring/spatialScore.ts`
+
+```typescript
+const score = Math.max(0, Math.round(800 - distance * 8))
+```
+
+La fórmula és lineal: `800 punts - (distància_km × multiplicador)`.
+
+| Multiplicador | 0 punts a... | Exemple: 50 km |
+|---|---|---|
+| `* 4` | 200 km | 600 pts |
+| `* 5` | 160 km | 550 pts |
+| `* 8` *(actual)* | 100 km | 400 pts |
+| `* 10` | 80 km | 300 pts |
+
+Per fer el joc més generós, **redueix** el multiplicador. Per fer-lo més estricte, **augmenta'l**.
+
+---
+
+### Nombre de rondes per partida
+
+**Fitxer:** `src/views/FreePlayView.vue` i `src/views/DailyChallengeView.vue`
+
+Busca la prop `total-rounds` al component `<GameplayView>`:
+
+```html
+<GameplayView :total-rounds="5" ... />
+```
+
+---
+
+### Rang d'anys de les fotografies (TimelineSlider)
+
+**Fitxer:** `src/components/game/TimelineSlider.vue`
+
+```typescript
+const MIN_YEAR = 1839  // any de la invenció de la fotografia
+const MAX_YEAR = 2025
+```
+
+---
+
+### Mapa: zoom i centre inicial
+
+**Fitxer:** `src/composables/useMap.ts`
+
+```typescript
+const defaultOptions = {
+  center: [20, 0],  // [lat, lon] — centre del món per defecte
+  zoom: 2,
+  minZoom: 2,
+  maxZoom: 18,
+}
+```
+
+Per centrar el mapa a Catalunya per defecte, canvia `center` a `[41.7, 1.8]` i `zoom` a `7`.
+
+---
+
+### Línia entre pins (revelació)
+
+**Fitxer:** `src/composables/useMap.ts` — funció `showCorrectLocation`
+
+```typescript
+paint: {
+  'line-color': '#000000',  // color de la línia
+  'line-width': 4,          // gruix en píxels
+  'line-opacity': 0.9,
+  'line-dasharray': [4, 4], // [longitud guió, longitud espai]
+}
+```
+
+---
+
+### Colors i tema visual
+
+**Fitxer:** `tailwind.config.js`
+
+```js
+colors: {
+  noir: {
+    bg:      '#0e0d0d',   // fons principal
+    surface: '#1b1918',   // targetes i panells
+    text:    '#EDE0CE',   // text principal
+    red:     '#6b1414',   // botó primari
+    gold:    '#D4A843',   // accents i or
+    muted:   '#2a2826',   // elements atenuats
+  }
+}
+```
+
+---
+
+## Estructura del projecte
+
+```
+public/
+├── figures.json          # Dades de totes les fotografies
+├── images/               # Imatges de les fotografies
+└── logos/                # Logo ICGC i altres
+
 src/
-├── components/        # Vue components (ui, game, lobby)
-├── composables/       # Vue composition functions
-├── lib/               # Core business logic
-│   ├── scoring/       # Scoring algorithms
-│   ├── matching/      # Fuzzy name matching
-│   ├── geography/     # Distance calculations
-│   └── supabase/      # Database queries and auth
-├── stores/            # Zustand state management
-├── views/             # Page-level components
-├── router/            # Vue Router configuration
-├── types/             # TypeScript definitions
-└── styles/            # Global CSS and Tailwind
-
-supabase/
-└── migrations/        # Database schema migrations
+├── components/
+│   ├── game/             # Components de joc (mapa, foto, puntuació...)
+│   └── ui/               # Components d'interfície (menú, botons, modal...)
+├── composables/
+│   └── useMap.ts         # Lògica del mapa MapLibre GL JS
+├── lib/
+│   ├── scoring/          # Càlcul de puntuació
+│   │   └── spatialScore.ts
+│   └── geography/        # Càlcul de distàncies (Haversine)
+├── stores/               # Estat global (Zustand/Pinia)
+├── views/                # Pàgines principals
+├── router/               # Configuració de Vue Router
+├── types/                # Definicions TypeScript
+└── styles/               # CSS global i Tailwind
 ```
 
-## Game Scoring
+---
 
-Each round has a maximum of **2,500 points**:
+## Llicència
 
-- **Location Accuracy** (0-800): Based on distance from correct location
-- **Temporal Accuracy** (0-800): Based on year difference from birth year
-- **Name Accuracy** (0-800): Fuzzy matching with tiered scoring
-- **Speed Bonus** (0-100): Time-based bonus (Daily/Multiplayer only)
-
-Total game maximum: **25,000 points** (10 rounds)
-
-## Database Schema
-
-### Core Tables
-- `figures` - Historical figures with images and metadata
-- `users` - User profiles synced with Supabase Auth
-- `player_stats` - Player statistics and streaks
-- `daily_scores` - Daily challenge submissions
-
-### Multiplayer Tables
-- `lobbies` - Game lobbies with room codes
-- `lobby_players` - Players in each lobby
-- `lobby_submissions` - Round submissions per player
-
-## Contributing
-
-Moon & Monitor Classic. This project was developed by Daniel Lopez from Hays, America. Criticisms & Contributions are welcome!
-
-## License
-
-MIT 2025(tm)
-
-## Acknowledgments
-
-- Historical figure images from Wikimedia Commons (Public Domain)
-- Map tiles from OpenStreetMap
+Institut Cartogràfic i Geològic de Catalunya (ICGC) · 2025
