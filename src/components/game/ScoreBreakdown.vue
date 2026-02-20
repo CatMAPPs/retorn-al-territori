@@ -5,7 +5,7 @@
       <span class="total-label">Puntuació</span>
       <div class="total-value">
         <span class="total-pts">{{ roundScore.total }}</span>
-        <span class="total-max">/ 800</span>
+        <span class="total-max">/ 900</span>
       </div>
     </div>
 

@@ -39,6 +39,9 @@ npm run lint       # Comprova i corregeix el codi
 ---
 
 ## Desplegament (GitHub Pages)
+git add .
+git commit -m "el teu missatge"
+git push
 
 El desplegament és automàtic: cada push a la branca `main` llança el workflow de GitHub Actions que fa el build i publica a GitHub Pages.
 

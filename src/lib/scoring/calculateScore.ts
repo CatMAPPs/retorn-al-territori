@@ -43,8 +43,8 @@ export function calculateRoundScore(
   const speedBonus =
     mode === 'daily_challenge' ? calculateSpeedBonus(submissionTime) : 0
 
-  // Calculate total (max 2500)
-  const total = Math.min(2500, spatialScore + temporalScore + nameScore + speedBonus)
+  // Calculate total (max 900)
+  const total = Math.min(900, spatialScore + speedBonus)
 
   return {
     spatial_score: spatialScore,
