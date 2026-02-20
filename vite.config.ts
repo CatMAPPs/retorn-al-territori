@@ -5,7 +5,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/carto-guesser/',
+  base: '/retorn-al-territori/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -19,7 +19,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vue-vendor': ['vue', 'vue-router'],
-          'map-vendor': ['maplibre-gl'],
+          'map-vendor': ['mapicgc-gl-js'],
           'utils-vendor': ['dayjs', 'zustand'],
         },
       },
