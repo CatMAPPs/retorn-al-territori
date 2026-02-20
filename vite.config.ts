@@ -19,7 +19,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vue-vendor': ['vue', 'vue-router'],
-          'map-vendor': ['mapicgc-gl-js'],
+          'map-vendor': ['maplibre-gl'],
           'utils-vendor': ['dayjs', 'zustand'],
         },
       },
