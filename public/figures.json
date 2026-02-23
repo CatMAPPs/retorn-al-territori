@@ -248,5 +248,55 @@
     "lon": 1.2742955252,
     "any_foto": 1950,
     "descripcio": "Vista parcial, Cervera"
+  },
+  {
+    "id": "26",
+    "nom": "Pantà de Can Borrell, Sant Cugat del Vallès",
+    "nom_fitxer": "panta_canborrell.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.4515932787,
+    "lon": 2.11145806,
+    "any_foto": 1950,
+    "descripcio": "Pantà de Can Borrell, Sant Cugat del Vallès"
+  },
+  {
+    "id": "27",
+    "nom": "Castell de Sant Marçal, Cerdanyola del Vallès",
+    "nom_fitxer": "castell_santmarcal.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.491842106,
+    "lon": 2.1140402016,
+    "any_foto": 1950,
+    "descripcio": "Castell de Sant Marçal, Cerdanyola del Vallès"
+  },
+  {
+    "id": "28",
+    "nom": "Vista del port des de Miramar, Barcelona",
+    "nom_fitxer": "vista_miramar.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.37099857749789,
+    "lon": 2.172530755998062,
+    "any_foto": 1950,
+    "descripcio": "Vista del port des de Miramar, Barcelona"
+  },
+  {
+    "id": "29",
+    "nom": "Castell de Montjuïc, Barcelona",
+    "nom_fitxer": "castell_montjuic.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.36384125596753,
+    "lon": 2.1671186665477036,
+    "any_foto": 1950,
+    "descripcio": "Castell de Montjuïc, Barcelona"
+  },
+  {
+    "id": "30",
+    "nom": "Castell d'Eramprunyà, Gavà",
+    "nom_fitxer": "castell_eramprunya.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.31405261634698,
+    "lon": 1.9574529702215682,
+    "any_foto": 1950,
+    "descripcio": "Castell d'Eramprunyà, Gavà"
   }
 ]
