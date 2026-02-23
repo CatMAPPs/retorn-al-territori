@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-  "nom": "Platja de Tossa de Mar",
+    "nom": "Platja de Tossa de Mar",
     "nom_fitxer": "tossa_torre.jpg",
     "autor": "Família Cuyàs",
     "lat": 41.718831,
@@ -9,7 +9,7 @@
     "any_foto": 1932,
     "descripcio": "Vista de la Platja de Tossa de Mar."
   },
-    {
+  {
     "id": "2",
     "nom": "Llac de Puigcerdà",
     "nom_fitxer": "puigcerda_llac.jpg",
@@ -19,7 +19,7 @@
     "any_foto": 1932,
     "descripcio": "Vista del Llac de Puigcerdà."
   },
-    {
+  {
     "id": "3",
     "nom": "Parc de Montjuïc: fonts lluminoses",
     "nom_fitxer": "bcn_montjuic.jpg",
@@ -29,7 +29,7 @@
     "any_foto": 1932,
     "descripcio": "Parc de Montjuïc: fonts lluminoses."
   },
-    {
+  {
     "id": "4",
     "nom": "Plaça del Dr. Bartomeu Robert Casa de la Ciutat, façana posterior",
     "nom_fitxer": "sabadell_robert.jpg",
@@ -39,7 +39,7 @@
     "any_foto": 1932,
     "descripcio": "Plaça del Dr. Bartomeu Robert Casa de la Ciutat, façana posterior."
   },
-    {
+  {
     "id": "5",
     "nom": "Església de la Mare de Déu de la Salut, Castelldefels",
     "nom_fitxer": "castelldefels_esglesia.jpg",
@@ -49,7 +49,7 @@
     "any_foto": 1932,
     "descripcio": "Església de la Mare de Déu de la Salut, Castelldefels."
   },
-    {
+  {
     "id": "6",
     "nom": "Casa de les Punxes, obra de Puig i Cadafalch, Barcelona",
     "nom_fitxer": "bcn_punxes.jpg",
@@ -58,6 +58,195 @@
     "lon": 2.16407,
     "any_foto": 1932,
     "descripcio": "Casa de les Punxes, obra de Puig i Cadafalch, Barcelona."
+  },
+  {
+    "id": "7",
+    "nom": "Plaça d'Espanya: plaça de Braus Les Arenes, any 1910, Barcelona",
+    "nom_fitxer": "pl_espanya.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.37486725,
+    "lon": 2.149432183,
+    "any_foto": 1910,
+    "descripcio": "Plaça d'Espanya: plaça de Braus Les Arenes, any 1910, Barcelona."
+  },
+  {
+    "id": "8",
+    "nom": "Antic santuari de Sant Joan de l'Erm",
+    "nom_fitxer": "santjoan_erm.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 42.438904976,
+    "lon": 1.25791745,
+    "any_foto": 1908,
+    "descripcio": "Antic santuari de Sant Joan de l'Erm"
+  },
+  {
+    "id": "9",
+    "nom": "Gran Via amb Rambla Catalunya, Barcelona",
+    "nom_fitxer": "rambla_granvia.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.38834286,
+    "lon": 2.167061573,
+    "any_foto": 1910,
+    "descripcio": "Gran Via amb Rambla Catalunya, Barcelona"
+  },
+  {
+    "id": "10",
+    "nom": "La Plaça Reial, Barcelona",
+    "nom_fitxer": "pl_reial.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.3798073,
+    "lon": 2.175422858,
+    "any_foto": 1910,
+    "descripcio": "La Plaça Reial, Barcelona"
+  },
+  {
+    "id": "11",
+    "nom": "Catalunya en miniatura: Catedral de Tarragona, Torrelles de Llobregat",
+    "nom_fitxer": "cat_miniatura.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.3583927,
+    "lon": 1.985388956,
+    "any_foto": 1960,
+    "descripcio": "Catalunya en miniatura: Catedral de Tarragona, Torrelles de Llobregat"
+  },
+  {
+    "id": "12",
+    "nom": "Gràcia: Parc Güell. Obra de Gaudí, detall de l'escalinata, Barcelona",
+    "nom_fitxer": "park_guell.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.41370235,
+    "lon": 2.15284631,
+    "any_foto": 1960,
+    "descripcio": "Gràcia: Parc Güell. Obra de Gaudí, detall de l'escalinata, Barcelona"
+  },
+  {
+    "id": "13",
+    "nom": "Ruïnes del castell i rellotge de la Casa de la Vila, Gironella",
+    "nom_fitxer": "castell_gironella.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 42.0333314,
+    "lon": 1.88171054,
+    "any_foto": 1950,
+    "descripcio": "Ruïnes del castell i rellotge de la Casa de la Vila, Gironella"
+  },
+  {
+    "id": "14",
+    "nom": "Pont de pedra: bastit en temps de Carles III i enfonsat el 1972, Molins de Rei",
+    "nom_fitxer": "pont_molins.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.408529,
+    "lon": 2.01239909,
+    "any_foto": 1950,
+    "descripcio": "Pont de pedra: bastit en temps de Carles III i enfonsat el 1972, Molins de Rei"
+  },
+  {
+    "id": "15",
+    "nom": "Església romànica de Santa Maria, Barberà del Vallès",
+    "nom_fitxer": "stamaria_barbera.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.5268101,
+    "lon": 2.12666278,
+    "any_foto": 1950,
+    "descripcio": "Església romànica de Santa Maria, Barberà del Vallès"
+  },
+  {
+    "id": "16",
+    "nom": "Plaça de la Universitat, Barcelona",
+    "nom_fitxer": "pl_universitat.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.3856392,
+    "lon": 2.1639426,
+    "any_foto": 1950,
+    "descripcio": "Plaça de la Universitat, Barcelona"
+  },
+  {
+    "id": "17",
+    "nom": "Carrer Major, Vilanova de Sau",
+    "nom_fitxer": "major_vilanovasau.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.94752556,
+    "lon": 2.3855757,
+    "any_foto": 1940,
+    "descripcio": "Carrer Major, Vilanova de Sau"
+  },
+  {
+    "id": "18",
+    "nom": "Plaça de la Victoria, Barcelona",
+    "nom_fitxer": "pl_victoria.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.39644885,
+    "lon": 2.15998226,
+    "any_foto": 1940,
+    "descripcio": "Plaça de la Victoria, Barcelona"
+  },
+  {
+    "id": "19",
+    "nom": "Plaça del Mercadal, Vic",
+    "nom_fitxer": "pl_mercadal.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.930700973,
+    "lon": 2.25392915,
+    "any_foto": 1940,
+    "descripcio": "Plaça del Mercadal, Vic"
+  },
+  {
+    "id": "20",
+    "nom": "Plaça i església de Sant Felip Neri, Barcelona",
+    "nom_fitxer": "pl_felipneri.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.38335012276205,
+    "lon": 2.1751682043005967,
+    "any_foto": 1960,
+    "descripcio": "Plaça i església de Sant Felip Neri, Barcelona"
+  },
+  {
+    "id": "21",
+    "nom": "Plaça de la Llana, Barcelona",
+    "nom_fitxer": "pl_llana.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.3850631,
+    "lon": 2.1793311,
+    "any_foto": 1960,
+    "descripcio": "Plaça de la Llana, Barcelona"
+  },
+  {
+    "id": "22",
+    "nom": "Cala de Sant Francesc, Blanes",
+    "nom_fitxer": "cala_stfrancesc.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.67901398,
+    "lon": 2.8083159236499,
+    "any_foto": 1950,
+    "descripcio": "Cala de Sant Francesc, Blanes"
+  },
+  {
+    "id": "23",
+    "nom": "Monument al Timbaler del Bruc, el Bruc",
+    "nom_fitxer": "timbaler_bruc.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.58334474199404,
+    "lon": 1.7779722886329279,
+    "any_foto": 1950,
+    "descripcio": "Monument al Timbaler del Bruc, el Bruc"
+  },
+  {
+    "id": "24",
+    "nom": "El pont romà, Caldes de Montbui",
+    "nom_fitxer": "pontroma_caldes.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.635795315,
+    "lon": 2.160132388,
+    "any_foto": 1950,
+    "descripcio": "El pont romà, Caldes de Montbui"
+  },
+  {
+    "id": "25",
+    "nom": "Vista parcial, Cervera",
+    "nom_fitxer": "vista_cervera.jpg",
+    "autor": "Família Cuyàs",
+    "lat": 41.669208367,
+    "lon": 1.2742955252,
+    "any_foto": 1950,
+    "descripcio": "Vista parcial, Cervera"
   }
 ]
-
