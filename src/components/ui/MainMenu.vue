@@ -8,7 +8,7 @@
       <div class="menu-header animate-fade-in">
         <h1 class="menu-logo">RETORN AL TERRITORI</h1>
         <div class="menu-divider"></div>
-        <p class="menu-tagline">Endevina on i quan va ser feta la foto</p>
+        <p class="menu-tagline">Endevina on va ser feta la foto</p>
       </div>
 
       <!-- Mode buttons -->
