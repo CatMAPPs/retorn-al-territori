@@ -1,13 +1,19 @@
 [
   {
     "id": "1",
-    "nom": "Platja de Tossa de Mar",
+    "nom": "La Villa Vella torre d'en Joanàs, Tossa de Mar.",
     "nom_fitxer": "tossa_torre.jpg",
     "autor": "Família Cuyàs",
     "lat": 41.718831,
     "lon": 2.933144,
     "any_foto": 1932,
-    "descripcio": "Vista de la Platja de Tossa de Mar."
+    "descripcio": "La Villa Vella torre d'en Joanàs, Tossa de Mar.", 
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas/id/10372/rec/2"
+      }
+    ]
   },
   {
     "id": "2",
@@ -17,7 +23,13 @@
     "lat": 42.436622,
     "lon": 1.926977,
     "any_foto": 1932,
-    "descripcio": "Vista del Llac de Puigcerdà."
+    "descripcio": "Vista del Llac de Puigcerdà.",
+       "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas/id/7720/rec/2"
+      }
+    ]
   },
   {
     "id": "3",
@@ -27,7 +39,13 @@
     "lat": 41.369647,
     "lon": 2.152732,
     "any_foto": 1932,
-    "descripcio": "Parc de Montjuïc: fonts lluminoses."
+    "descripcio": "Parc de Montjuïc: fonts lluminoses.",
+     "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas/id/1120/rec/1"
+      }
+    ]
   },
   {
     "id": "4",
@@ -37,7 +55,13 @@
     "lat": 41.546502,
     "lon": 2.108778,
     "any_foto": 1932,
-    "descripcio": "Plaça del Dr. Bartomeu Robert Casa de la Ciutat, façana posterior."
+    "descripcio": "Plaça del Dr. Bartomeu Robert Casa de la Ciutat, façana posterior.",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "5",
@@ -47,7 +71,13 @@
     "lat": 41.280632,
     "lon": 1.976965,
     "any_foto": 1932,
-    "descripcio": "Església de la Mare de Déu de la Salut, Castelldefels."
+    "descripcio": "Església de la Mare de Déu de la Salut, Castelldefels.",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "6",
@@ -57,7 +87,13 @@
     "lat": 41.39803,
     "lon": 2.16407,
     "any_foto": 1932,
-    "descripcio": "Casa de les Punxes, obra de Puig i Cadafalch, Barcelona."
+    "descripcio": "Casa de les Punxes, obra de Puig i Cadafalch, Barcelona.",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "7",
@@ -67,7 +103,13 @@
     "lat": 41.37486725,
     "lon": 2.149432183,
     "any_foto": 1910,
-    "descripcio": "Plaça d'Espanya: plaça de Braus Les Arenes, any 1910, Barcelona."
+    "descripcio": "Plaça d'Espanya: plaça de Braus Les Arenes, any 1910, Barcelona.",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "8",
@@ -77,7 +119,13 @@
     "lat": 42.438904976,
     "lon": 1.25791745,
     "any_foto": 1908,
-    "descripcio": "Antic santuari de Sant Joan de l'Erm"
+    "descripcio": "Antic santuari de Sant Joan de l'Erm",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "9",
@@ -87,7 +135,13 @@
     "lat": 41.38834286,
     "lon": 2.167061573,
     "any_foto": 1910,
-    "descripcio": "Gran Via amb Rambla Catalunya, Barcelona"
+    "descripcio": "Gran Via amb Rambla Catalunya, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "10",
@@ -97,7 +151,13 @@
     "lat": 41.3798073,
     "lon": 2.175422858,
     "any_foto": 1910,
-    "descripcio": "La Plaça Reial, Barcelona"
+    "descripcio": "La Plaça Reial, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "11",
@@ -107,7 +167,13 @@
     "lat": 41.3583927,
     "lon": 1.985388956,
     "any_foto": 1960,
-    "descripcio": "Catalunya en miniatura: Catedral de Tarragona, Torrelles de Llobregat"
+    "descripcio": "Catalunya en miniatura: Catedral de Tarragona, Torrelles de Llobregat",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "12",
@@ -117,7 +183,13 @@
     "lat": 41.41370235,
     "lon": 2.15284631,
     "any_foto": 1960,
-    "descripcio": "Gràcia: Parc Güell. Obra de Gaudí, detall de l'escalinata, Barcelona"
+    "descripcio": "Gràcia: Parc Güell. Obra de Gaudí, detall de l'escalinata, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "13",
@@ -127,7 +199,13 @@
     "lat": 42.0333314,
     "lon": 1.88171054,
     "any_foto": 1950,
-    "descripcio": "Ruïnes del castell i rellotge de la Casa de la Vila, Gironella"
+    "descripcio": "Ruïnes del castell i rellotge de la Casa de la Vila, Gironella",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "14",
@@ -137,7 +215,13 @@
     "lat": 41.408529,
     "lon": 2.01239909,
     "any_foto": 1950,
-    "descripcio": "Pont de pedra: bastit en temps de Carles III i enfonsat el 1972, Molins de Rei"
+    "descripcio": "Pont de pedra: bastit en temps de Carles III i enfonsat el 1972, Molins de Rei",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "15",
@@ -147,7 +231,13 @@
     "lat": 41.5268101,
     "lon": 2.12666278,
     "any_foto": 1950,
-    "descripcio": "Església romànica de Santa Maria, Barberà del Vallès"
+    "descripcio": "Església romànica de Santa Maria, Barberà del Vallès",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "16",
@@ -157,7 +247,13 @@
     "lat": 41.3856392,
     "lon": 2.1639426,
     "any_foto": 1950,
-    "descripcio": "Plaça de la Universitat, Barcelona"
+    "descripcio": "Plaça de la Universitat, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "17",
@@ -167,7 +263,13 @@
     "lat": 41.94752556,
     "lon": 2.3855757,
     "any_foto": 1940,
-    "descripcio": "Carrer Major, Vilanova de Sau"
+    "descripcio": "Carrer Major, Vilanova de Sau",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "18",
@@ -177,7 +279,13 @@
     "lat": 41.39644885,
     "lon": 2.15998226,
     "any_foto": 1940,
-    "descripcio": "Plaça de la Victoria, Barcelona"
+    "descripcio": "Plaça de la Victoria, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "19",
@@ -187,7 +295,13 @@
     "lat": 41.930700973,
     "lon": 2.25392915,
     "any_foto": 1940,
-    "descripcio": "Plaça del Mercadal, Vic"
+    "descripcio": "Plaça del Mercadal, Vic",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "20",
@@ -197,7 +311,13 @@
     "lat": 41.38335012276205,
     "lon": 2.1751682043005967,
     "any_foto": 1960,
-    "descripcio": "Plaça i església de Sant Felip Neri, Barcelona"
+    "descripcio": "Plaça i església de Sant Felip Neri, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "21",
@@ -207,7 +327,13 @@
     "lat": 41.3850631,
     "lon": 2.1793311,
     "any_foto": 1960,
-    "descripcio": "Plaça de la Llana, Barcelona"
+    "descripcio": "Plaça de la Llana, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "22",
@@ -217,7 +343,13 @@
     "lat": 41.67901398,
     "lon": 2.8083159236499,
     "any_foto": 1950,
-    "descripcio": "Cala de Sant Francesc, Blanes"
+    "descripcio": "Cala de Sant Francesc, Blanes",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "23",
@@ -227,7 +359,13 @@
     "lat": 41.58334474199404,
     "lon": 1.7779722886329279,
     "any_foto": 1950,
-    "descripcio": "Monument al Timbaler del Bruc, el Bruc"
+    "descripcio": "Monument al Timbaler del Bruc, el Bruc",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "24",
@@ -237,7 +375,13 @@
     "lat": 41.635795315,
     "lon": 2.160132388,
     "any_foto": 1950,
-    "descripcio": "El pont romà, Caldes de Montbui"
+    "descripcio": "El pont romà, Caldes de Montbui",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "25",
@@ -247,7 +391,13 @@
     "lat": 41.669208367,
     "lon": 1.2742955252,
     "any_foto": 1950,
-    "descripcio": "Vista parcial, Cervera"
+    "descripcio": "Vista parcial, Cervera",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "26",
@@ -257,7 +407,13 @@
     "lat": 41.4515932787,
     "lon": 2.11145806,
     "any_foto": 1950,
-    "descripcio": "Pantà de Can Borrell, Sant Cugat del Vallès"
+    "descripcio": "Pantà de Can Borrell, Sant Cugat del Vallès",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "27",
@@ -267,7 +423,13 @@
     "lat": 41.491842106,
     "lon": 2.1140402016,
     "any_foto": 1950,
-    "descripcio": "Castell de Sant Marçal, Cerdanyola del Vallès"
+    "descripcio": "Castell de Sant Marçal, Cerdanyola del Vallès",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "28",
@@ -277,7 +439,13 @@
     "lat": 41.37099857749789,
     "lon": 2.172530755998062,
     "any_foto": 1950,
-    "descripcio": "Vista del port des de Miramar, Barcelona"
+    "descripcio": "Vista del port des de Miramar, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "29",
@@ -287,7 +455,13 @@
     "lat": 41.36384125596753,
     "lon": 2.1671186665477036,
     "any_foto": 1950,
-    "descripcio": "Castell de Montjuïc, Barcelona"
+    "descripcio": "Castell de Montjuïc, Barcelona",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   },
   {
     "id": "30",
@@ -297,6 +471,12 @@
     "lat": 41.31405261634698,
     "lon": 1.9574529702215682,
     "any_foto": 1950,
-    "descripcio": "Castell d'Eramprunyà, Gavà"
+    "descripcio": "Castell d'Eramprunyà, Gavà",
+    "attributions": [
+      {
+        "name": "Fons Família Cuyàs (1905-1980), Institut Cartogràfic i Geològic de Catalunya",
+        "url": "https://cartotecadigital.icgc.cat/digital/collection/cuyas"
+      }
+    ]
   }
 ]

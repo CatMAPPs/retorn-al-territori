@@ -1,0 +1,37 @@
+{
+  "name": "Retorn al Territori",
+  "short_name": "Retorn al Territori",
+  "icons": [
+   
+    {
+      "src": "icgc_icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+			"purpose": "maskable any"
+
+    }, 
+    {
+      "src": "icgc_icon_256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+			"purpose": "maskable any"
+
+    },
+	{
+      "src": "icgc_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+			"purpose": "maskable any"
+
+    }
+    
+    
+  ],
+
+  "start_url": "/retorn-al-territori/",
+  "scope": "/retorn-al-territori/",
+  "display": "standalone",
+  "background_color": "#a18a68",
+  "theme_color": "#b3a38d"
+}
+

@@ -10,6 +10,23 @@
         <span class="figure-autor">📷 {{ figure.autor }}</span>
         <p v-if="figure.descripcio" class="figure-desc">{{ figure.descripcio }}</p>
       </div>
+
+      <!-- Attributions -->
+      <div v-if="figure.attributions && figure.attributions.length > 0" class="attributions-section">
+        <div class="attributions-label">Font:</div>
+        <ul class="attributions-list">
+          <li v-for="(attr, index) in figure.attributions" :key="index" class="attribution-item">
+            <a :href="attr.url" target="_blank" rel="noopener noreferrer" class="attribution-link">
+              {{ attr.name }}
+              <svg class="external-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </Card>
 
     <!-- Score -->
@@ -94,6 +111,36 @@ const handleNext = () => emit('next')
 
 .figure-desc {
   @apply text-sm text-noir-text/75 leading-relaxed;
+}
+
+/* ── Attributions ── */
+.attributions-section {
+  @apply mt-4 pt-4 border-t border-noir-gold/15;
+}
+
+.attributions-label {
+  @apply text-xs text-noir-text/60 font-medium uppercase tracking-wide mb-2;
+}
+
+.attributions-list {
+  @apply space-y-2 list-none;
+}
+
+.attribution-item {
+  @apply text-sm;
+}
+
+.attribution-link {
+  @apply inline-flex items-center gap-1.5 text-noir-gold hover:text-noir-gold/80 transition-colors;
+  text-decoration: none;
+}
+
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+.external-icon {
+  @apply opacity-60 group-hover:opacity-100 transition-opacity;
 }
 
 /* ── Actions ── */

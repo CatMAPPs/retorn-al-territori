@@ -7,6 +7,14 @@ export interface Coordinates {
 }
 
 /**
+ * Attribution data structure
+ */
+export interface Attribution {
+  name: string
+  url: string
+}
+
+/**
  * Figure (photo) data structure
  */
 export interface Figure {
@@ -18,4 +26,5 @@ export interface Figure {
   lon: number
   any_foto: number
   descripcio: string
+  attributions?: Attribution[]
 }

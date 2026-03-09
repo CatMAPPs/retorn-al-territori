@@ -38,6 +38,7 @@
           v-if="currentFigure"
           :nom-fitxer="currentFigure.nom_fitxer"
           :alt-text="`Fotografia ronda ${currentRound}`"
+          :figure="currentFigure"
         />
       </div>
 
