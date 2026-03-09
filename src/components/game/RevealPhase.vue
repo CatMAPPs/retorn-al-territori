@@ -3,12 +3,11 @@
     <!-- Figure info -->
     <Card class="reveal-card">
       <div class="reveal-header">
-        <h2 class="figure-nom">{{ figure.nom }}</h2>
-        <span class="figure-year">{{ figure.any_foto }}</span>
-      </div>
-      <div class="reveal-meta">
-        <span class="figure-autor">📷 {{ figure.autor }}</span>
-        <p v-if="figure.descripcio" class="figure-desc">{{ figure.descripcio }}</p>
+        <div class="figure-info">
+          <h2 class="figure-nom">{{ figure.nom }}</h2>
+          <!-- <p v-if="figure.descripcio" class="figure-desc">{{ figure.descripcio }}</p> -->
+        </div>
+        <!-- <span class="figure-year">{{ figure.any_foto }}</span> -->
       </div>
 
       <!-- Attributions -->
@@ -93,8 +92,16 @@ const handleNext = () => emit('next')
   border-bottom: 1px solid rgba(203,161,53,0.15);
 }
 
+.figure-info {
+  @apply flex-1;
+}
+
 .figure-nom {
   @apply text-lg font-playfair text-noir-gold leading-snug;
+}
+
+.figure-desc {
+  @apply text-sm text-noir-text/75 leading-relaxed mt-2;
 }
 
 .figure-year {
@@ -109,14 +116,10 @@ const handleNext = () => emit('next')
   @apply text-xs text-noir-text/50 block;
 }
 
-.figure-desc {
-  @apply text-sm text-noir-text/75 leading-relaxed;
-}
-
 /* ── Attributions ── */
-.attributions-section {
+/* .attributions-section {
   @apply mt-4 pt-4 border-t border-noir-gold/15;
-}
+} */
 
 .attributions-label {
   @apply text-xs text-noir-text/60 font-medium uppercase tracking-wide mb-2;
